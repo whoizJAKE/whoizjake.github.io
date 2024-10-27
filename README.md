@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -42,7 +42,7 @@
 <body>
     <header>
         <h1>Jacob Hmaiddout</h1>
-        <p> </p>
+        
     </header>
 
     <section class="section">
