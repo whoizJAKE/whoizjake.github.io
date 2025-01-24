@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -90,6 +91,7 @@
             text-align: center;
         }
     </style>
+    <link rel="stylesheet" href="CSSradientAnimation2025website.css">
 </head>
 <body>
     <header>
