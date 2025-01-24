@@ -1,4 +1,3 @@
-
 <html lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -91,7 +90,6 @@
         }
     </style>
     <link rel="stylesheet" href="CSSradientAnimation2025website.css">
-</head>
 <body>
     <header>
         <h1>Jacob Hmaiddout</h1>
