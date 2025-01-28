@@ -162,7 +162,12 @@ Alors voilà, c’est pas mal moi! Si tu veux me contacter, c’est facile, tu p
     </section>
 
     <footer>
-        <p>Contact: <a href="mailto:jico0x7@gmail.com">jico0x7@gmail.com</a> | Phone:<a href="tel:819-829-2436" </a>+819-829-2436 </a>(landline)</a> or<a href="tel:8196409235"</a>+819-640-9235</a> (mobile)</p>
+        <p>Contact: <a href="mailto:jico0x7@gmail.com">jico0x7@gmail.com</a>  
+            
+            <a href="tel:819-829-2436">+819-829-2436</a> (landline)  
+            or  
+            <a href="tel:8196409235">+819-640-9235</a> (mobile)
+            </p>
     </footer>
 </body>
 </html>
