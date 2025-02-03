@@ -134,7 +134,7 @@ Alors voilà, c’est pas mal moi! Si tu veux me contacter, c’est facile, tu p
         <p>
             Pour accéder à mon CV, vous pouvez le télécharger ci-dessous:<br>
             To access my CV, you can download it below: 
-            <a download href="path/to/your/https://github.com/whoizJAKE/whoizJAKE.github.io/blob/main/CV%20UPDATE%202024.pdf" download>Download CV</a>
+            <a href="https://raw.githubusercontent.com/whoizJAKE/whoizJAKE.github.io/main/CV%20UPDATE%202024.pdf" download>Download CV</a>
         </p>
     </section>
 
