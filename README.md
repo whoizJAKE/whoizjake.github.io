@@ -92,6 +92,7 @@
             padding-top: 10px;
             text-align: center;
         }
+        
     </style>
     <link rel="stylesheet" href="CSSradientAnimation2025website.css">
 </head>
@@ -99,11 +100,10 @@
     <header>
         <h1>Jacob Hmaiddout</h1>
     </header>
-
-    <section class="section">
         <h2>Plus sur moi</h2>
         <p>
-            Partie en français plus bas. Click on the text with all caps too follow up on links that i attached too the text
+            Cliquez ici pour me voir.. Click here to see me on my<a href="https://vs.co/lz3exrac">VSCO</a>..
+            Partie en français plus bas. Click on the text with all caps too follow up on links that i attached too the text..
             My name is Jacob Hmaiddout, i was born in Trois-Rivière in June of 2000. My dad was moroccan who came and establish himself in Canada in the late 90's and my mother's from Quebec and Trois-Rivère thoo.
             I love football (I'm a big 49ers fan since i'm 9yo and obviously a big hater of the Seahawks and Cowboys). I live at my terminal most of the time because I love technology.talking about my love for technologies,
             i've become with time a big bitcoin maximalist (maximalist meaning that i'm putting around 10% - 30% of all my paychecks in BTC). I invested in other companies like Palantir, BTO gold Corp et Dynocorp (the latter being A Quebec based company) early on too. I'm a big rap fan and, weirdly enough,
