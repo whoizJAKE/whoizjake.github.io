@@ -142,7 +142,7 @@ Je vais linker le rapport d’autopsie pour que tu vois par toi-même que même 
 Moi-même, j’ai contribué à trouver les derniers moments de Seth pendant qu’il marchait vers chez lui à partir d’un bar à DC. J’ai cartographié toutes les caméras de surveillance (CCTV) et je les ai uploadées en ligne. Le thread est épinglé sur mon compte X, tu peux y accéder en cliquant <a href="https://x.com/Jacob_hmaiddout/status/1678475419593351197">JUSTE ICI</a>. Si tu peux pas voir ça sur X, j’ai mis une sauvegarde sur Imgur <a href="https://imgur.com/a/ytAK4">BASE DE DONNÉES</a>.
 Alors voilà, c’est pas mal moi! Si tu veux me contacter, c’est facile, tu peux cliquer sur un de mes réseaux sociaux.              
 </p>  
- class="section">
+ 
 <h2>CV</h2>
 <p>
     Pour accéder à mon CV, vous pouvez le télécharger ci-dessous:<br>
@@ -151,7 +151,6 @@ Alors voilà, c’est pas mal moi! Si tu veux me contacter, c’est facile, tu p
 </p>
 </section>
 
-<section class="section">
 <h2>Mes projets</h2>
 <p>
     My future projects and ideas will be added here... I'll probably include some photos and more details soon. 
