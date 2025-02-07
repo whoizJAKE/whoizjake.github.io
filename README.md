@@ -157,9 +157,7 @@ Alors voilà, c’est pas mal moi! Si tu veux me contacter, c’est facile, tu p
 </p>
 <p>Thanks! :)</p>
 
-
 <h2>Socials</h2>
-<div class="socials">
     
 <footer>
     <footer>
