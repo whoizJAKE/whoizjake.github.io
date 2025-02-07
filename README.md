@@ -149,8 +149,6 @@ Alors voilà, c’est pas mal moi! Si tu veux me contacter, c’est facile, tu p
     To access my CV, you can download it below: 
     <a href="https://raw.githubusercontent.com/whoizJAKE/whoizJAKE.github.io/main/CV%20UPDATE%202024.pdf" download>Download CV</a>
 </p>
-</section>
-
 <h2>Mes projets</h2>
 <p>
     My future projects and ideas will be added here... I'll probably include some photos and more details soon. 
