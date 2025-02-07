@@ -156,9 +156,8 @@ Alors voilà, c’est pas mal moi! Si tu veux me contacter, c’est facile, tu p
     <strong>Wallet:</strong> bc1qegmu3pxwnju04wrc7lm4vkuej6k9aftwkqd932
 </p>
 <p>Thanks! :)</p>
-</section>
 
-<section class="section">
+
 <h2>Socials</h2>
 <div class="socials">
     
