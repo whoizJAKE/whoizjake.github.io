@@ -140,15 +140,13 @@ Je crois aussi à certaines théories du "complot", comme l’assassinat de JFK 
 Une autre théorie qui, selon moi, est pas mal vraie, c’est le meurtre de Seth Rich. C’est qui, Seth Rich? Ben, c’était un administrateur système de 27 ans pour le Parti démocrate. Il s’est fait tuer en plein milieu de Washington DC en juillet 2016, avec des blessures par balles dans le dos. La police de DC a classé ça comme un vol, mais rien lui a été volé : ni sa montre, ni son portefeuille, rien. Pendant que son meurtre s’est déroulé, les fuites des courriels d’Hillary Clinton étaient en cours. Beaucoup de gens, comme moi, ont fait le lien entre ces deux événements, et pas pour rien.
 Je vais linker le rapport d’autopsie pour que tu vois par toi-même que même la police de DC et les premiers intervenants sur place avaient l’impression que c’était un meurtre politique relié au DNC, mais l’enquête a été bloquée par les hautes instances de la police de DC <a href="https://i.4pcdn.org/pol/1496023589075.jpg">AUTOPSIE DE SETH</a>.
 Moi-même, j’ai contribué à trouver les derniers moments de Seth pendant qu’il marchait vers chez lui à partir d’un bar à DC. J’ai cartographié toutes les caméras de surveillance (CCTV) et je les ai uploadées en ligne. Le thread est épinglé sur mon compte X, tu peux y accéder en cliquant <a href="https://x.com/Jacob_hmaiddout/status/1678475419593351197">JUSTE ICI</a>. Si tu peux pas voir ça sur X, j’ai mis une sauvegarde sur Imgur <a href="https://imgur.com/a/ytAK4">BASE DE DONNÉES</a>.
-Alors voilà, c’est pas mal moi! Si tu veux me contacter, c’est facile, tu peux cliquer sur un de mes réseaux sociaux.              
-</p>  
- 
+Alors voilà, c’est pas mal moi! Si tu veux me contacter, c’est facile, tu peux cliquer sur un de mes réseaux sociaux.         
 <h2>CV</h2>
 <p>
     Pour accéder à mon CV, vous pouvez le télécharger ci-dessous:<br>
     To access my CV, you can download it below: 
     <a href="https://raw.githubusercontent.com/whoizJAKE/whoizJAKE.github.io/main/CV%20UPDATE%202024.pdf" download>Download CV</a>
-</p>
+
 <h2>Mes projets</h2>
 <p>
     My future projects and ideas will be added here... I'll probably include some photos and more details soon. 
