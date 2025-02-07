@@ -99,8 +99,6 @@
     </style>
 </head>
 <body>
-    </style>
-</head>
 <body>
     <!-- MY Newwwwww Top Social Bar -->
     <div class="top-social-bar">
@@ -117,7 +115,6 @@
         <h1>Jacob Hmaiddout</h1>
     </header>
     
-</header>
 <h2>Plus sur moi</h2>
 <p>
     Cliquez ici pour me voir.. Click here to see me on my<a href="https://vs.co/lz3exrac">VSCO</a>..
@@ -145,9 +142,7 @@ Je vais linker le rapport d’autopsie pour que tu vois par toi-même que même 
 Moi-même, j’ai contribué à trouver les derniers moments de Seth pendant qu’il marchait vers chez lui à partir d’un bar à DC. J’ai cartographié toutes les caméras de surveillance (CCTV) et je les ai uploadées en ligne. Le thread est épinglé sur mon compte X, tu peux y accéder en cliquant <a href="https://x.com/Jacob_hmaiddout/status/1678475419593351197">JUSTE ICI</a>. Si tu peux pas voir ça sur X, j’ai mis une sauvegarde sur Imgur <a href="https://imgur.com/a/ytAK4">BASE DE DONNÉES</a>.
 Alors voilà, c’est pas mal moi! Si tu veux me contacter, c’est facile, tu peux cliquer sur un de mes réseaux sociaux.              
 </p>  
-</section>
-
-<section class="section">
+ class="section">
 <h2>CV</h2>
 <p>
     Pour accéder à mon CV, vous pouvez le télécharger ci-dessous:<br>
@@ -190,5 +185,4 @@ Alors voilà, c’est pas mal moi! Si tu veux me contacter, c’est facile, tu p
             <a href="https://vs.co/lz3exrac" target="_blank" title="VSCO">V</a>
         </div>
     </footer>
-</body>
-</html>
+
