@@ -88,7 +88,7 @@
 <body>
     <nav class="nav-bar">
         <a href="https://jacobhmaiddout.com">Home</a>
-        <a href="">About Me</a>
+        <a href="https://github.com/whoizJAKE/whoizjake.github.io/blob/main/plus%20sur%20moi.html">About Me</a>
     </nav>
     
     <div class="top-social-bar">
