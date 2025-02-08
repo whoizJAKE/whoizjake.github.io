@@ -88,7 +88,7 @@
 <body>
     <nav class="nav-bar">
         <a href="https://jacobhmaiddout.com">Home</a>
-        <a href="plus sur moi.html">About Me</a>
+        <a href="">About Me</a>
     </nav>
     
     <div class="top-social-bar">
@@ -105,7 +105,6 @@
     </header>
     
     <main>
-        <h2>Plus sur moi</h2>
         <h2>CV</h2>
         <p>
             Pour accéder à mon CV, vous pouvez le télécharger ci-dessous:<br>
