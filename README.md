@@ -88,8 +88,8 @@
 <body>
     <nav class="nav-bar">
         <a href="https://jacobhmaiddout.com">Home</a>
-        <a href="<a href="pages/plus sur moi.html">About Me</a>
-">About Me</a>
+        <a href="plussurmoi.html">About Me</a>
+
     </nav>
     
     <div class="top-social-bar">
