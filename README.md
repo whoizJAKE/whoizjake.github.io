@@ -99,6 +99,9 @@
     </style>
 </head>
 <body>
+    <nav class="nav-bar">
+        <a href="https://jacobhmaiddout.com">Home</a>
+        <a href="plus sur moi">About Me</a>
 <body>
     <!-- MY Newwwwww Top Social Bar -->
     <div class="top-social-bar">
