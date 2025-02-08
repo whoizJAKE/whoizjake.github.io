@@ -63,6 +63,27 @@
 
         .top-social-bar a:hover {
             transform: scale(1.2);
+        }.nav-bar {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .nav-bar a {
+            color: black;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            background-color: rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            background-color: rgba(255,255,255,0.4);
+            transform: scale(1.05);
         }
 
         h1 {
