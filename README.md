@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -84,82 +85,6 @@
             padding: 20px 0;
         }
     </style>
-
-
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .top-social-bar, .nav-bar, footer .footer-socials {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            padding: 10px;
-        }
-
-        .top-social-bar a, .footer-socials a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgb(238, 5, 5);
-            color: black;
-            text-align: center;
-            line-height: 40px;
-            font-size: 16px;
-            font-weight: bold;
-            transition: transform 0.3s ease;
-        }
-
-        .top-social-bar a:hover, .footer-socials a:hover {
-            transform: scale(1.2);
-        }
-
-        .nav-bar {
-            background-color: rgba(0,0,0,0.1);
-            padding: 15px;
-            margin-bottom: 20px;
-            width: 100%;
-        }
-
-        .nav-bar a {
-            color: black;
-            text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            background-color: rgba(255,255,255,0.2);
-            transition: all 0.3s ease;
-        }
-
-        .nav-bar a:hover {
-            background-color: rgba(255,255,255,0.4);
-            transform: scale(1.05);
-        }
-
-        main {
-            width: 90%;
-            max-width: 600px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .blog-post {
-            background-color: rgba(255,255,255,0.2);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            text-align: left;
-        }
-
-        footer {
-            width: 100%;
-            padding: 20px 0;
-        }
-    </style>
 </head>
 <body>
     <nav class="nav-bar">
@@ -167,6 +92,15 @@
         <a href="plussurmoi.html">About Me</a>
         <a href="blog.html">Blog</a>
     </nav>
+    
+    <div class="top-social-bar">
+        <a href="https://x.com/Jacob_hmaiddout" target="_blank">X</a>
+        <a href="https://www.instagram.com/jacob_hmaiddout/" target="_blank">IG</a>
+        <a href="https://www.facebook.com/jacob.hmaiddout/" target="_blank">FB</a>
+        <a href="https://github.com/whoizJAKE" target="_blank">Git</a>
+        <a href="https://www.linkedin.com/in/jacob-hma%C3%AFddout-06226925b/" target="_blank">LkI</a>
+        <a href="https://vs.co/lz3exrac" target="_blank">V</a>
+    </div>
     
     <header>
         <h1>Jacob Hmaiddout</h1>
@@ -203,5 +137,4 @@
     </footer>
 </body>
 </html>
-
 
