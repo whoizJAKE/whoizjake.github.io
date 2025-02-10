@@ -167,17 +167,6 @@
         <a href="plussurmoi.html">About Me</a>
         <a href="blog.html">Blog</a>
     </nav>
-
-    </nav>
-    
-    <div class="top-social-bar">
-        <a href="https://x.com/Jacob_hmaiddout" target="_blank">X</a>
-        <a href="https://www.instagram.com/jacob_hmaiddout/" target="_blank">IG</a>
-        <a href="https://www.facebook.com/jacob.hmaiddout/" target="_blank">FB</a>
-        <a href="https://github.com/whoizJAKE" target="_blank">Git</a>
-        <a href="https://www.linkedin.com/in/jacob-hma%C3%AFddout-06226925b/" target="_blank">LkI</a>
-        <a href="https://vs.co/lz3exrac" target="_blank">V</a>
-    </div>
     
     <header>
         <h1>Jacob Hmaiddout</h1>
