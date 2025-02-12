@@ -110,7 +110,7 @@
         <p>
             Pour accéder à mon CV, vous pouvez le télécharger ci-dessous:<br>
             To access my CV, you can download it below:
-            <a href="path/to/your/https://github.com/whoizJAKE/whoizjake.github.io/blob/main/cvupdate2025pdf.html" download>Download CV</a>
+            <a href="cvupdate2025pdf.pdf" download>Download CV</a>
         </p>
         <h2>Mes projets</h2>
         <p>My future projects and ideas will be added here... I'll probably include some photos and more details soon.</p>
