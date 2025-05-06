@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,13 +12,11 @@
             color: #333;
             margin: 0;
             padding: 0;
-            /* Your vibrant gradient background */
-            background: linear-gradient(45deg, red, orange, yellow, green, purple, blue, brown);
-            background-size: 400% 400%;
-            min-height: 100vh;
+            background: #f5f5f5; /* Light, professional background */
         }
 
         header {
+            background: linear-gradient(45deg, red, orange, yellow, green, purple, blue, brown);
             padding: 20px;
             text-align: center;
         }
@@ -25,7 +24,7 @@
         h1 {
             color: white;
             margin: 0;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* For readability on gradient */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Improves readability on gradient */
         }
 
         .nav-bar {
@@ -36,29 +35,29 @@
         }
 
         .nav-bar a {
-            padding: 12px 25px;
-            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for contrast */
-            color: purple; /* Pulled from your gradient */
+            padding: 10px 20px;
+            background: purple; /* From your gradient */
+            color: white;
             text-decoration: none;
-            border-radius: 25px;
-            font-size: 18px;
+            border-radius: 5px;
+            font-size: 16px;
             transition: background 0.3s;
         }
 
         .nav-bar a:hover {
-            background: rgba(255, 255, 255, 1);
+            background: #4b0082; /* Darker purple on hover */
         }
 
-        .section, footer {
-            background: rgba(255, 255, 255, 0.95); /* Light container for readability */
+        .section {
+            background: white;
             padding: 20px;
             margin: 20px auto;
             max-width: 800px;
-            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle depth */
         }
 
         .section h2 {
-            color: purple; /* Tie in your color scheme */
+            color: purple; /* Ties into your color scheme */
             border-bottom: 2px solid rgba(0, 0, 0, 0.1);
             padding-bottom: 5px;
             margin-bottom: 20px;
@@ -73,42 +72,37 @@
             color: purple;
         }
 
+        footer {
+            background: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+        }
+
         .footer-socials {
             display: flex;
             justify-content: center;
             gap: 20px;
-            padding: 10px 0;
         }
 
-        .footer-socials i {
+        .footer-socials a {
             color: green; /* From your gradient */
-            font-size: 26px;
+            font-size: 24px;
             transition: color 0.3s;
         }
 
-        .footer-socials a:hover i {
+        .footer-socials a:hover {
             color: purple;
-        }
-
-        /* Responsive design */
-        @media (max-width: 600px) {
-            .nav-bar {
-                flex-direction: column;
-            }
-            .nav-bar a {
-                margin-bottom: 15px;
-            }
         }
     </style>
 </head>
 <body>
     <header>
+        <h1>Jacob Hmaiddout</h1>
         <nav class="nav-bar">
             <a href="https://jacobhmaiddout.com">Home</a>
             <a href="plussurmoi.html">About Me</a>
             <a href="blog.html">Blog</a>
         </nav>
-        <h1>Jacob Hmaiddout</h1>
     </header>
 
     <section class="section">
@@ -132,7 +126,7 @@
             <a href="https://www.facebook.com/jacob.hmaiddout/" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="https://github.com/whoizJAKE" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/jacob-hma%C3%AFddout-06226925b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://vs.co/lz3exrac" target="_blank"><i class="fab fa-vimeo-v"></i></a>
+            <a href="https://vs.co/lz3exrac" target="_blank"><i class="fas fa-link"></i></a> <!-- Corrected VSCO link -->
         </div>
     </footer>
 </body>
