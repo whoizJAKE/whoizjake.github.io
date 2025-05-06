@@ -3,88 +3,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jacob Hmaiddout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
-            background: #f5f8fa;
-            color: #14171a;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
             margin: 0;
             padding: 0;
+            /* Your vibrant gradient background */
+            background: linear-gradient(45deg, red, orange, yellow, green, purple, blue, brown);
+            background-size: 400% 400%;
+            min-height: 100vh;
         }
 
-        .header {
-            background: white;
+        header {
             padding: 20px;
-            border-bottom: 1px solid #e6ecf0;
             text-align: center;
+        }
+
+        h1 {
+            color: white;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* For readability on gradient */
         }
 
         .nav-bar {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin-bottom: 10px;
+            gap: 15px;
+            margin: 20px 0;
         }
 
         .nav-bar a {
-            padding: 10px 20px;
-            background: #1DA1F2;
-            color: white;
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for contrast */
+            color: purple; /* Pulled from your gradient */
             text-decoration: none;
-            border-radius: 20px;
-            font-size: 16px;
+            border-radius: 25px;
+            font-size: 18px;
+            transition: background 0.3s;
         }
 
         .nav-bar a:hover {
-            background: #0c84d1;
+            background: rgba(255, 255, 255, 1);
         }
 
-        h1 {
-            margin: 0;
-        }
-
-        .section {
-            background: white;
+        .section, footer {
+            background: rgba(255, 255, 255, 0.95); /* Light container for readability */
             padding: 20px;
             margin: 20px auto;
             max-width: 800px;
+            border-radius: 10px;
         }
 
         .section h2 {
-            border-bottom: 2px solid #e6ecf0;
+            color: purple; /* Tie in your color scheme */
+            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
             padding-bottom: 5px;
             margin-bottom: 20px;
         }
 
         a {
-            color: #1DA1F2;
+            color: blue; /* From your gradient */
             text-decoration: none;
         }
 
         a:hover {
-            color: #0c84d1;
-        }
-
-        footer {
-            background: white;
-            padding: 20px;
-            text-align: center;
+            color: purple;
         }
 
         .footer-socials {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
+            padding: 10px 0;
         }
 
-        .footer-socials a {
-            color: #1DA1F2;
-            font-size: 20px;
+        .footer-socials i {
+            color: green; /* From your gradient */
+            font-size: 26px;
+            transition: color 0.3s;
         }
 
-        .footer-socials a:hover {
-            color: #0c84d1;
+        .footer-socials a:hover i {
+            color: purple;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .nav-bar {
+                flex-direction: column;
+            }
+            .nav-bar a {
+                margin-bottom: 15px;
+            }
         }
     </style>
 </head>
@@ -105,7 +118,11 @@
             To access my CV, you can download it below:
             <a href="cvupdate2025pdf.pdf" download>Download CV</a>
         </p>
-        <p>Contact: <a href="mailto:jico0x7@gmail.com">jico0x7@gmail.com</a> | Phone: +819-829-2436 (landline) or +819-640-9235 (mobile)</p>
+        <p>
+            Contact: <a href="mailto:jico0x7@gmail.com">jico0x7@gmail.com</a> | 
+            Phone: <a href="tel:+8198292436">+819-829-2436</a> (landline) or 
+            <a href="tel:+8196409235">+819-640-9235</a> (mobile)
+        </p>
     </section>
 
     <footer>
@@ -115,12 +132,8 @@
             <a href="https://www.facebook.com/jacob.hmaiddout/" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="https://github.com/whoizJAKE" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/jacob-hma%C3%AFddout-06226925b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://vs.co/lz3exrac" target="_blank"><i class="fab fa-VSCO-v"></i></a>
+            <a href="https://vs.co/lz3exrac" target="_blank"><i class="fab fa-vimeo-v"></i></a>
         </div>
-    </footer>
-</body>
-</html>
-        <p>Contact: <a href="mailto:jico0x7@gmail.com">jico0x7@gmail.com</a> | Phone: +819-829-2436 (landline) or +819-640-9235 (mobile)</p>
     </footer>
 </body>
 </html>
