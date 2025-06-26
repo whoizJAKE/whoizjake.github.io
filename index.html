@@ -1,102 +1,159 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jacob Hmaiddout</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.12);
+            --glass-border: rgba(255, 255, 255, 0.18);
+            --glass-shadow: rgba(0, 0, 0, 0.10);
+        }
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
             color: #333;
             margin: 0;
             padding: 0;
-            /* gradient background */
-            background: linear-gradient(45deg, red, orange, yellow, green, purple, blue, brown);
-            background-size: 400% 400%;
+            background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+            background-size: 200% 200%;
             min-height: 100vh;
+            animation: gradientBG 15s ease infinite;
         }
-
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px 0 var(--glass-shadow);
+        }
         header {
             padding: 20px;
             text-align: center;
+            margin-bottom: 40px;
         }
-
         h1 {
             color: white;
             margin: 0;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Gradient adjustement for readability */
+            font-weight: 600;
+            font-size: 2.5em;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
-
         .nav-bar {
             display: flex;
             justify-content: center;
             gap: 15px;
             margin: 20px 0;
+            padding: 10px;
         }
-
         .nav-bar a {
             padding: 12px 25px;
-            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white contrast */
-            color: purple; /* Pulled from your gradient */
+            color: white;
             text-decoration: none;
-            border-radius: 25px;
-            font-size: 18px;
-            transition: background 0.3s;
+            border-radius: 16px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
         }
-
         .nav-bar a:hover {
-            background: rgba(255, 255, 255, 1);
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
         }
-
         .section, footer {
-            background: rgba(255, 255, 255, 0.95); /* Light for readability(container) */
-            padding: 20px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 30px;
             margin: 20px auto;
             max-width: 800px;
-            border-radius: 10px;
+            border-radius: 24px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px 0 var(--glass-shadow);
         }
-
         .section h2 {
-            color: purple; /* Tie in the color scheme */
-            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-            padding-bottom: 5px;
+            color: white;
+            font-weight: 600;
+            letter-spacing: -0.5px;
             margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
         }
-
+        .section p {
+            color: rgba(255, 255, 255, 0.92);
+            line-height: 1.6;
+        }
         a {
-            color: blue; /* From gradient */
+            color: white;
             text-decoration: none;
+            transition: opacity 0.3s ease;
         }
-
         a:hover {
-            color: purple;
+            opacity: 0.8;
         }
-
         .footer-socials {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
             padding: 10px 0;
         }
-
         .footer-socials i {
-            color: green; /* From gradient */
-            font-size: 26px;
-            transition: color 0.3s;
+            color: white;
+            font-size: 24px;
+            transition: all 0.3s ease;
         }
-
         .footer-socials a:hover i {
-            color: purple;
+            transform: translateY(-3px);
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
-
-        /* Responsive design */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .contact-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.13);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--glass-border);
+            color: white;
+            font-weight: 500;
+            font-size: 1em;
+        }
+        .contact-button:hover {
+            background: rgba(255, 255, 255, 0.22);
+            transform: translateY(-2px);
+        }
+        .contact-button i {
+            font-size: 16px;
+        }
         @media (max-width: 600px) {
             .nav-bar {
                 flex-direction: column;
+                padding: 0 20px;
             }
-            .nav-bar a {
-                margin-bottom: 15px;
+            .section, footer {
+                margin: 20px;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
             }
         }
     </style>
@@ -104,9 +161,9 @@
 <body>
     <header>
         <nav class="nav-bar">
-            <a href="https://jacobhmaiddout.com">Home</a>
-            <a href="plussurmoi.html">About Me</a>
-            <a href="blog.html">Blog</a>
+            <a href="https://jacobhmaiddout.com" class="glass">Home</a>
+            <a href="plussurmoi.html" class="glass">About Me</a>
+            <a href="blog.html" class="glass">Blog</a>
         </nav>
         <h1>Jacob Hmaiddout</h1>
     </header>
@@ -116,16 +173,24 @@
         <p>
             Pour accéder à mon CV, vous pouvez le télécharger ci-dessous:<br>
             To access my CV, you can download it below:
-            <a href="cvupdate2025pdf.pdf" download>Download CV</a>
         </p>
-        <p>
-            Contact: <a href="mailto:jico0x7@gmail.com">jico0x7@gmail.com</a> | 
-            Phone: <a href="tel:+8198292436">+819-829-2436</a> (landline) or 
-            <a href="tel:+8196409235">+819-640-9235</a> (mobile)
-        </p>
+        <a href="cvupdate2025pdf.pdf" download class="contact-button">
+            <i class="fas fa-file-download"></i> Download CV
+        </a>
+        <div class="contact-info">
+            <a href="mailto:jico0x7@gmail.com" class="contact-button">
+                <i class="fas fa-envelope"></i> jico0x7@gmail.com
+            </a>
+            <a href="tel:+18198292436" class="contact-button">
+                <i class="fas fa-phone"></i> +1 (819) 829-2436 (landline)
+            </a>
+            <a href="tel:+18196409235" class="contact-button">
+                <i class="fas fa-mobile-alt"></i> +1 (819) 640-9235 (mobile)
+            </a>
+        </div>
     </section>
 
-    <footer>
+    <footer class="glass">
         <div class="footer-socials">
             <a href="https://x.com/Jacob_hmaiddout" target="_blank"><i class="fab fa-twitter"></i></a>
             <a href="https://www.instagram.com/jacob_hmaiddout/" target="_blank"><i class="fab fa-instagram"></i></a>
