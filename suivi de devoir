@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cegep Homework Tracker</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #d4edff 0%, #87ceeb 50%, #4682b4 100%);
+            min-height: 100vh;
+            color: #1a202c;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.4);
+            border-bottom: 3px solid #1e3a8a;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 700;
+        }
+
+        .homework-grid {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .day-badge {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+            border: 2px solid #1e3a8a;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            justify-content: space-between;
+        }
+
+        .homework-item {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 16px;
+            padding: 1.75rem;
+            box-shadow: 
+                0 8px 25px rgba(0, 0, 0, 0.12),
+                0 2px 8px rgba(0, 0, 0, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            position: relative;
+        }
+
+        .homework-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #1e40af, #3b82f6, #60a5fa);
+            border-radius: 16px 16px 0 0;
+        }
+
+        .homework-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 
+                0 16px 40px rgba(30, 64, 175, 0.2),
+                0 4px 12px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        }
+
+        .homework-item h3 {
+            margin: 0 0 0.75rem;
+            color: #1e40af;
+            font-size: 1.35rem;
+            font-weight: 700;
+            text-shadow: 0 1px 2px rgba(30, 64, 175, 0.1);
+        }
+
+        .homework-item p {
+            margin: 0.75rem 0;
+            color: #374151;
+            font-weight: 500;
+        }
+
+        .subject {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+        }
+
+        .deadline {
+            font-size: 0.9rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            color: white;
+            margin-left: 0.5rem;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .priority-1 { background: linear-gradient(135deg, #dc2626, #ef4444); }
+        .priority-2 { background: linear-gradient(135deg, #ea580c, #f97316); }
+        .priority-3 { background: linear-gradient(135deg, #16a34a, #22c55e); }
+        .priority-4 { background: linear-gradient(135deg, #1e40af, #3b82f6); }
+        .priority-5 { background: linear-gradient(135deg, #7c3aed, #8b5cf6); }
+
+        .priority-controls {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            align-items: center;
+        }
+
+        .priority-btn {
+            padding: 0.4rem 0.8rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.85rem;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .priority-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .priority-btn.active {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .priority-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #374151;
+            margin-right: 0.5rem;
+        }
+
+        .delete-btn {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+            background: linear-gradient(135deg, #dc2626, #ef4444);
+            color: white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            transition: all 0.2s ease;
+        }
+
+        .delete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+
+        .history-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+
+        .small-btn {
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .restore-btn { background: linear-gradient(135deg, #16a34a, #22c55e); color: white; }
+        .perma-delete-btn { background: linear-gradient(135deg, #6b7280, #9ca3af); color: white; }
+
+        .add-assignment-section {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            box-shadow: 
+                0 8px 25px rgba(0, 0, 0, 0.12),
+                0 2px 8px rgba(0, 0, 0, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            position: relative;
+        }
+
+        .add-assignment-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #1e40af, #3b82f6, #60a5fa);
+            border-radius: 16px 16px 0 0;
+        }
+
+        .form-title {
+            color: #1e40af;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            text-shadow: 0 1px 2px rgba(30, 64, 175, 0.1);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-input, .form-select {
+            padding: 0.75rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            background: white;
+        }
+
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .add-btn {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 4px rgba(30, 64, 175, 0.3);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .add-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.4);
+        }
+
+        .add-btn:active {
+            transform: translateY(0);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.25rem;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            position: sticky;
+            bottom: 0;
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: 0 -4px 12px rgba(30, 64, 175, 0.3);
+            border-top: 2px solid #1e3a8a;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Devoirs du Cégep</h1>
+    </header>
+
+    <div class="add-assignment-section">
+        <h2 class="form-title">➕ Ajouter un nouveau devoir</h2>
+        <form id="addAssignmentForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label class="form-label">Titre du devoir</label>
+                    <input type="text" class="form-input" id="assignmentTitle" placeholder="Ex: Devoir 1" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Code du cours</label>
+                    <input type="text" class="form-input" id="courseCode" placeholder="Ex: INF101" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Date d'échéance</label>
+                    <input type="date" class="form-input" id="dueDate" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Priorité</label>
+                    <select class="form-select" id="priority" required>
+                        <option value="1">1 - Haute</option>
+                        <option value="2">2 - Moyenne-Haute</option>
+                        <option value="3" selected>3 - Moyenne</option>
+                        <option value="4">4 - Moyenne-Basse</option>
+                        <option value="5">5 - Basse</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="add-btn">Ajouter le devoir</button>
+        </form>
+    </div>
+
+    <div class="homework-grid" id="active-grid">
+        <div class="day-badge">Devoirs actuels</div>
+    </div>
+
+    <div class="homework-grid" id="history-grid">
+        <div class="day-badge">Historique des devoirs terminés</div>
+    </div>
+
+    <script>
+        // Data arrays
+        let assignments = [];
+        let historyAssignments = [];
+
+        // Load from localStorage and convert date strings back to Date objects
+        function loadAssignments() {
+            const saved = localStorage.getItem('homeworkAssignments');
+            const savedHistory = localStorage.getItem('homeworkHistory');
+
+            if (saved) {
+                try {
+                    assignments = JSON.parse(saved).map(a => ({
+                        ...a,
+                        dueDate: { ...a.dueDate, date: new Date(a.dueDate.date) }
+                    }));
+                } catch (e) {
+                    console.error('Erreur parsing homeworkAssignments', e);
+                    assignments = [];
+                }
+            } else {
+                assignments = [];
+            }
+
+            if (savedHistory) {
+                try {
+                    historyAssignments = JSON.parse(savedHistory).map(h => ({
+                        ...h,
+                        dueDate: { ...h.dueDate, date: new Date(h.dueDate.date) },
+                        finishedAt: h.finishedAt ? new Date(h.finishedAt) : null
+                    }));
+                } catch (e) {
+                    console.error('Erreur parsing homeworkHistory', e);
+                    historyAssignments = [];
+                }
+            } else {
+                historyAssignments = [];
+            }
+        }
+
+        function saveAssignments() {
+            //les dates seront automatiquement converties en chaînes ISO par JSON.string// When saving, Dates will automatically be converted to ISO strings by JSON.stringify
+            localStorage.setItem('homeworkAssignments', JSON.stringify(assignments));
+            localStorage.setItem('homeworkHistory', JSON.stringify(historyAssignments));
+        }
+
+        const activeGrid = document.getElementById('active-grid');
+        const historyGrid = document.getElementById('history-grid');
+
+        //niveau de priorité// Helper to get human-readable priority label
+        function priorityLabel(priority) {
+            const p = Number(priority);
+            return p === 1 ? 'Haute' : p === 2 ? 'Moyenne-Haute' : p === 3 ? 'Moyenne' : p === 4 ? 'Moyenne-Basse' : 'Basse';
+        }
+
+        function renderAssignments() {
+            // Render active assignments//activer les devs pis la date
+            activeGrid.innerHTML = '<div class="day-badge">Devoirs actuels</div>';
+
+            if (assignments.length === 0) {
+                activeGrid.innerHTML += '<div class="homework-item"><p>Aucun devoir pour le moment.</p></div>';
+            } else {
+                assignments.forEach(assignment => {
+                    const dueDate = assignment.dueDate && assignment.dueDate.date ? new Date(assignment.dueDate.date) : null;
+                    const dueStr = dueDate ? dueDate.toLocaleDateString('fr-CA') : '';
+                    const pr = Number(assignment.dueDate.priority || 3);
+
+                    const card = `
+                        <div class="homework-item" data-assignment-id="${assignment.id}">
+                            <h3>${escapeHtml(assignment.title)}</h3>
+                            <p>
+                                Échéance: ${dueStr}
+                                <span class="deadline priority-${pr}">${priorityLabel(pr)}</span>
+                            </p>
+                            <div class="subject">${escapeHtml(assignment.courseCode || '')}</div>
+
+                            <div class="priority-controls">
+                                <span class="priority-label">Priorité :</span>
+                                ${[1,2,3,4,5].map(p => `
+                                    <button class="priority-btn priority-${p} ${pr === p ? 'active' : ''}" onclick="changePriority('${assignment.id}', ${p})">${p}</button>
+                                `).join('')}
+                            </div>
+
+                            <button class="delete-btn" onclick="markDone('${assignment.id}')">❌ Terminé</button>
+                        </div>
+                    `;
+
+                    activeGrid.innerHTML += card;
+                });
+            }
+
+            // Render history//render l'historique des devs
+            historyGrid.innerHTML = '<div class="day-badge">Historique des devoirs terminés <div></div></div>';
+
+            if (historyAssignments.length === 0) {
+                historyGrid.innerHTML += '<div class="homework-item"><p>Historique vide.</p></div>';
+            } else {
+                historyAssignments.slice().reverse().forEach(h => {
+                    const finished = h.finishedAt ? new Date(h.finishedAt) : null;
+                    const finishedStr = finished ? finished.toLocaleString('fr-CA') : '';
+                    const dueDate = h.dueDate && h.dueDate.date ? new Date(h.dueDate.date) : null;
+                    const dueStr = dueDate ? dueDate.toLocaleDateString('fr-CA') : '';
+
+                    const historyCard = `
+                        <div class="homework-item" data-history-id="${h.id}">
+                            <h3>${escapeHtml(h.title)}</h3>
+                            <p>Échéance: ${dueStr} • Terminé le: ${finishedStr}</p>
+                            <div class="subject">${escapeHtml(h.courseCode || '')} • <span class="deadline priority-${Number(h.dueDate.priority || 3)}">${priorityLabel(h.dueDate.priority)}</span></div>
+
+                            <div class="history-actions">
+                                <button class="small-btn restore-btn" onclick="restoreFromHistory('${h.id}')">↩️ Restaurer</button>
+                                <button class="small-btn perma-delete-btn" onclick="deleteHistoryItem('${h.id}')">🗑 Supprimer</button>
+                            </div>
+                        </div>
+                    `;
+
+                    historyGrid.innerHTML += historyCard;
+                });
+
+                // Add clear history button after list
+                historyGrid.innerHTML += '<div style="grid-column:1/-1;text-align:center;margin-top:-0.5rem;"><button id="clearHistoryBtn" class="delete-btn">Vider l\'historique</button></div>';
+            }
+
+            // Wire clear history button if present
+            const clearBtn = document.getElementById('clearHistoryBtn');
+            if (clearBtn) clearBtn.addEventListener('click', clearHistory);
+        }
+
+        // mark assignment as done -> move to history
+        function markDone(assignmentId) {
+            const idx = assignments.findIndex(a => a.id === assignmentId);
+            if (idx === -1) return;
+            const [removed] = assignments.splice(idx, 1);
+            const entry = {
+                ...removed,
+                finishedAt: new Date().toISOString()
+            };
+            historyAssignments.push(entry);
+            saveAssignments();
+            renderAssignments();
+
+            // small visual feedback
+            const el = document.querySelector(`[data-assignment-id="${assignmentId}"]`);
+            if (el) {
+                el.style.transform = 'scale(0.98)';
+                setTimeout(() => el.style.transform = '', 200);
+            }
+        }
+
+        function changePriority(assignmentId, newPriority) {
+            const a = assignments.find(x => x.id === assignmentId);
+            if (!a) return;
+            a.dueDate.priority = newPriority;
+            saveAssignments();
+            renderAssignments();
+        }
+
+        function restoreFromHistory(id) {
+            const idx = historyAssignments.findIndex(h => h.id === id);
+            if (idx === -1) return;
+            const [restored] = historyAssignments.splice(idx, 1);
+            // remove finishedAt when restoring
+            delete restored.finishedAt;
+            assignments.push(restored);
+            saveAssignments();
+            renderAssignments();
+        }
+
+        function deleteHistoryItem(id) {
+            const idx = historyAssignments.findIndex(h => h.id === id);
+            if (idx === -1) return;
+            if (!confirm('Supprimer définitivement cet élément de l\'historique ?')) return;
+            historyAssignments.splice(idx, 1);
+            saveAssignments();
+            renderAssignments();
+        }
+
+        function clearHistory() {
+            if (!confirm('Vider tout l\'historique ? Cette action est irréversible.')) return;
+            historyAssignments = [];
+            saveAssignments();
+            renderAssignments();
+        }
+
+        // Utility to escape HTML when inserting into templates
+        function escapeHtml(str) {
+            if (!str) return '';
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+        }
+
+        // Handle form submit
+        document.getElementById('addAssignmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const title = document.getElementById('assignmentTitle').value.trim();
+            const courseCode = document.getElementById('courseCode').value.trim();
+            const dueDateValue = document.getElementById('dueDate').value;
+            const priority = parseInt(document.getElementById('priority').value, 10);
+
+            if (!title || !courseCode || !dueDateValue) {
+                alert('Remplis tous les champs du formulaire.');
+                return;
+            }
+
+            const dueDateObj = new Date(dueDateValue);
+            const newAssignment = {
+                id: Date.now().toString(),
+                title,
+                courseCode,
+                professor: { name: 'Professeur', initials: 'P.' },
+                dueDate: { date: dueDateObj, priority },
+                category: 'assignment'
+            };
+
+            assignments.push(newAssignment);
+            saveAssignments();
+            renderAssignments();
+
+            // reset form and feedback
+            document.getElementById('addAssignmentForm').reset();
+            document.getElementById('priority').value = '3';
+
+            const addBtn = document.querySelector('.add-btn');
+            const originalText = addBtn.textContent;
+            addBtn.textContent = '✅ Devoir ajouté!';
+            addBtn.style.background = 'linear-gradient(135deg, #16a34a 0%, #22c55e 100%)';
+            setTimeout(() => {
+                addBtn.textContent = originalText;
+                addBtn.style.background = 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)';
+            }, 1500);
+        });
+
+        // Set default date to tomorrow
+        document.getElementById('dueDate').value = new Date(Date.now() + 86400000).toISOString().split('T')[0];
+
+        // Initial load
+        loadAssignments();
+        renderAssignments();
+    </script>
+
+    <footer>Organise tes devoirs du Cegep</footer>
+</body>
+</html>
