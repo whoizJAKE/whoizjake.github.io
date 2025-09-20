@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recette de cuisine</title>
+    <style>
+        table tr, td, th {
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: full;
+            border-radius: 25px;
+            background-color: #31dc8f;
+            padding: 20px;
+            color: rgb(230, 225, 225);
+            font-weight: 500;
+            transition: background-color 0.3s, transform 0.3s;
+            width: 50px;
+        }
+        table, tr, td, th {
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: full;
+            border-radius: 25px;
+            background-color: #506bb0;
+            padding: 20px;
+            color: rgb(0, 0, 0);
+            font-weight: 500;
+            transition: background-color 0.3s, transform 0.3s;
+            width: 50px;
+        }
+        table tr:hover, td:hover, th:hover {
+            background-color: #f39c12;
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d9a7ee;
+            margin: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+    
+        table {
+            width: 50%;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            color: #262d18;
+        }
+    </style>
+</head>
+<body>
+    <!-- Début des tableaux et du body -->
+    <h1>Recette de cuisine</h1>
+    <table>
+        <tr>
+            <th>Ingrédients/quantité d'Ingrédients</th>
+            <th>Étapes</th>
+        </tr>
+        <tr>
+            <td>200g de farine</td>
+            <td>#1 : prendre et mesurer la farine dans un bol</td>
+        </tr>
+        <tr>
+            <td>200g Oeufs (ou plus ou moins 4oeufs)</td>
+            <td>#2 : les mettre et les mélanger avec la farine</td>
+        </tr>
+        <tr>
+            <td>Sucre 100g</td>
+            <td>#3 : Ajouter le sucre au mélange et bien incorporer</td>
+        </tr>
+        <tr>
+            <td>250ML Lait</td>
+            <td>#4 : rajouter le Lait au autre ing/dients</td>
+        </tr>
+        <tr>
+            <td>1 pincée de sel</td>
+            <td>#5 : Ajouter une pincée de sel pour rehausser le goût</td>
+        </tr>
+    </table>
+    <!-- Début du 2ème tableau -->
+    <table>
+        <!--pas oublier que le 2eme tableau est tagg h2, m'a peut-être add d'autre tables pour me pratiquer -->
+        <tr><h2> Détails de la recette</h2></th>
+            <th>Temps de préparation</th>
+            <th>Temps de cuisson</th>
+            <th>Portions</th>
+        </tr>
+        <tr>
+            <td>10 minutes</td>
+            <td>20 minutes</td>
+            <td>4 personnes</td>
+        </tr>
+    </table>
+</body>
+<!-- fin des tableaux et du body -->
+<footer>
+    <p style="text-align: center; color: #333;">fait par Jacob Hmaiddout lors de mon cours de Programmation et developpement web</p>
