@@ -4,93 +4,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="MEminecraft.png"/>
     <title>Jacob Hmaiddout - Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            background: linear-gradient(45deg, #ff0000, #ff7300, #ffd900, #00ff44, #754b6d, #4800ff, #817e27);
-            background-size: 400% 400%;
-            animation: gradientAnimation 15s ease infinite;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            color: black;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.12);
+            --glass-border: rgba(255, 255, 255, 0.18);
+            --glass-shadow: rgba(0, 0, 0, 0.10);
         }
 
-        @keyframes gradientAnimation {
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #000000, #904503, #f97316, #ea580c);
+            background-size: 200% 200%;
+            min-height: 100vh;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
-        .top-social-bar, .nav-bar, footer .footer-socials {
+        .top-social-bar,
+        .footer-socials {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 10px;
             flex-wrap: wrap;
             padding: 10px;
+            margin: 0 auto;
+            max-width: 760px;
         }
 
-        .top-social-bar a, .footer-socials a {
-            display: inline-block;
+        .top-social-bar a,
+        .footer-socials a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: rgb(238, 5, 5);
-            color: black;
-            text-align: center;
-            line-height: 40px;
-            font-size: 16px;
-            font-weight: bold;
-            transition: transform 0.3s ease;
-        }
-
-        .top-social-bar a:hover, .footer-socials a:hover {
-            transform: scale(1.2);
-        }
-
-        .nav-bar {
-            background-color: rgba(0,0,0,0.1);
-            padding: 15px;
-            margin-bottom: 20px;
-            width: 100%;
-        }
-
-        .nav-bar a {
-            color: black;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            color: white;
             text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            background-color: rgba(255,255,255,0.2);
+            font-size: 14px;
+            font-weight: 700;
             transition: all 0.3s ease;
         }
 
+        .top-social-bar a:hover,
+        .footer-socials a:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            padding: 8px 0 0;
+            margin: 20px auto 0;
+            width: calc(100% - 32px);
+            max-width: 760px;
+            background: transparent;
+            border: none;
+        }
+
+        .nav-bar a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 999px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
         .nav-bar a:hover {
-            background-color: rgba(255,255,255,0.4);
-            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+        }
+
+        header {
+            width: 92%;
+            max-width: 760px;
+            margin: 24px auto 0;
+            text-align: center;
+        }
+
+        header h1 {
+            color: white;
+            margin: 0;
+            font-weight: 600;
+            font-size: 2.1rem;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
         main {
-            width: 90%;
-            max-width: 600px;
+            width: 92%;
+            max-width: 760px;
+            margin: 24px auto 30px;
             text-align: center;
-            margin-bottom: 20px;
         }
 
         .blog-post {
-            background-color: rgba(255,255,255,0.2);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 28px 0 var(--glass-shadow);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 22px;
+            padding: 24px;
+            max-width: 680px;
+            margin: 0 auto 20px;
             text-align: left;
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        .blog-post h2 {
+            color: white;
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .blog-post p,
+        .blog-post small {
+            color: rgba(255, 255, 255, 0.88);
+            line-height: 1.6;
+        }
+
+        .blog-post a {
+            color: rgba(255, 255, 255, 0.95);
+            text-decoration: underline;
         }
 
         footer {
-            width: 100%;
-            padding: 20px 0;
+            width: 92%;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 24px 0;
+            color: white;
+            text-align: center;
         }
     </style>
 </head>
@@ -100,15 +166,6 @@
         <a href="plussurmoi.html">About Me</a>
         <a href="blog.html">Blog</a>
     </nav>
-    
-    <div class="top-social-bar">
-        <a href="https://x.com/Jacob_hmaiddout" target="_blank">X</a>
-        <a href="https://www.instagram.com/jacob_hmaiddout/" target="_blank">IG</a>
-        <a href="https://www.facebook.com/jacob.hmaiddout/" target="_blank">FB</a>
-        <a href="https://github.com/whoizJAKE" target="_blank">Git</a>
-        <a href="https://www.linkedin.com/in/jacob-hma%C3%AFddout-06226925b/" target="_blank">LkI</a>
-        <a href="https://vs.co/lz3exrac" target="_blank">V</a>
-    </div>
     
     <header>
         <h1>Mon Blog / My Blog</h1>
@@ -120,29 +177,27 @@
             <p>Coming soon! I'll be sharing my thoughts, experiences, and insights here.</p>
             <small>Posted on February 10, 2025</small>
         </div>
-       
-       <main>
-            <div class="blog-post">
-                <h2>Video recommendations / Vidéo à voir que je recommende</h2>
-                <p>Who created Bitcoin ? Maybe this got the answer.  
-                <a href="https://www.youtube.com/watch?v=_Kav2K1DVWo">Part 1  </a>   <a href="https://www.youtube.com/watch?v=fMWnaR5uJxQ"> Part 2  </a>  <a  href="https://www.youtube.com/watch?v=XfcvX0P1b5g"> Part 3 </a>  </p>
+
+        <div class="blog-post">
+            <h2>Video recommendations / Vidéo à voir que je recommende</h2>
+            <p>Who created Bitcoin? Maybe this got the answer.<br>
+                <a href="https://www.youtube.com/watch?v=_Kav2K1DVWo">Part 1</a>
+                <a href="https://www.youtube.com/watch?v=fMWnaR5uJxQ">Part 2</a>
+                <a href="https://www.youtube.com/watch?v=XfcvX0P1b5g">Part 3</a>
             </p>
-                <small>Posted on 20th July 2025</small>
-            </div>
-       <!--add les href avec le close du "a avec le slash bar" à la fin du link god damnn don't fucked up next time plzz et corriger les typos en date du 12 fev 2025 et same correction chez websiteindex.html-->
-            <div class="blog-post">
+            <small>Posted on 20th July 2025</small>
+        </div>
+
+        <div class="blog-post">
             <h2>Projects/Projet</h2>
-            <p>Nouveau projet pour apprendre du JS. Peut-être utille pour mes amis fumeurs !!!
-            <a href="https://puffcounter.org/"> Mon nouveau projet pour apprendre JS</a> </p>
-            
-            <small>Publié le 4 Mars 2025 /\ Posted on March 4, 2025</small>
-                
-                    <p>Site pour enregistrer mes devoirs avec une date de remise, fait avec HTML,CSS et JS.
-                    <a href="https://jacobhmaiddout.com/suividedevoir">En espérant que ça pourrait être utile pour quelques étudiants !! </a> <p/>
-                    
-               <small>Publié le 20 Septembre 2025 /\ Posted on September 20, 2025</small>        
-                 <!--add ma apple music playlist, doit pas oublier de l'Add dans le index.html et autre stack-->
-                <!--fuck la playlist, ill just add other stuff than that-->
+            <p>Nouveau projet pour apprendre du JS. Peut-être utile pour mes amis fumeurs!<br>
+                <a href="https://puffcounter.org/">Mon nouveau projet pour apprendre JS</a>
+            </p>
+            <small>Publié le 4 Mars 2025 / Posted on March 4, 2025</small>
+            <p>Site pour enregistrer mes devoirs avec une date de remise, fait avec HTML, CSS et JS.<br>
+                <a href="https://jacobhmaiddout.com/suividedevoir">En espérant que ça pourrait être utile pour quelques étudiants !!</a>
+            </p>
+            <small>Publié le 20 Septembre 2025 / Posted on September 20, 2025</small>
         </div>
     </main>
     
