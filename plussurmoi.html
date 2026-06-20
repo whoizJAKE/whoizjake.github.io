@@ -5,36 +5,26 @@
     <link rel="icon" type="image/png" href="MEminecraft.png"/>
     <title>About Me - Jacob Hmaiddout</title>
     <style>
-        body {
-            background: linear-gradient(45deg, #ff0000, #ff7300, #ffd900, #00ff44, #754b6d, #4800ff, #817e27);
-            background-size: 400% 400%;
-            animation: gradientAnimation 15s ease infinite;
-            margin: 0;
-            padding: 20px;
-            font-family: Arial, sans-serif;
-            color: rgb(0, 0, 0);
-            line-height: 1.6;
-            overflow-x: hidden;
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.12);
+            --glass-border: rgba(255, 255, 255, 0.18);
+            --glass-shadow: rgba(0, 0, 0, 0.10);
         }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #ff0000, #ff7300, #ffd900, #00ff44, #754b6d, #4800ff, #817e27);
-            background-size: 400% 400%;
-            animation: gradientAnimation 15s ease infinite;
-            z-index: -1;
-        }
-
-        @keyframes gradientAnimation {
+       body {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #000000, #904503, #f97316, #ea580c);
+    background-size: 200% 200%;
+    min-height: 100vh;
+    animation: gradientBG 15s ease infinite;
+}
+        @keyframes gradientBG {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
-        }
+        } 
 
         .nav-bar {
             display: flex;
