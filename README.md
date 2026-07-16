@@ -6,3 +6,5 @@ Vous pouvez aussi me contacter par Github directemment !!
 j'ai commencé à faire du developpement web avec mon iPad Mini 6th gen (A16 chip) with 4gb of RAM and a storagee of 128gb. Pretty neat with the keybard and there's 
 a lot of stuff i'll do with this device, on the go !!
 -25/06/2026 / J'ai update le look dans les derniers mois du site, essayer de custom mes propres backgrounds fonts et gradients avc CSS
+
+-16/07/2026 / J'ai add mon NFL-HUB sur lequel je work depuis plus ou moins 1 mois. Live at https://jacobhmaiddout.com/nflhub.html
