@@ -345,6 +345,90 @@ var TEAMS = [
   {abbr:'SEA',name:'Seattle Seahawks',conf:'NFC',div:'West',id:26}
 ];
 
+// ── 2026 NFL SCHEDULE (scraped from ESPN, July 2026) ──────────────────────────
+// Format: {week, date (ISO), away, home, time, tv, label}
+var SCHEDULE_2026 = [
+  // PRESEASON
+  {week:'HOF',label:'Hall of Fame',date:'2026-08-06T20:00:00',away:'CAR',home:'ARI',time:'8:00 PM',tv:'NBC'},
+  // Pre Wk 1 (Aug 13-15) - stubs, matchups TBD by ESPN
+  {week:'Pre 1',label:'Preseason Wk 1',date:'2026-08-13',away:'TBD',home:'TBD',time:'TBD',tv:''},
+  // Pre Wk 2 (Aug 20-23)
+  {week:'Pre 2',label:'Preseason Wk 2',date:'2026-08-20',away:'TBD',home:'TBD',time:'TBD',tv:''},
+  // Pre Wk 3 (Aug 27-29)
+  {week:'Pre 3',label:'Preseason Wk 3',date:'2026-08-27',away:'TBD',home:'TBD',time:'TBD',tv:''},
+
+  // WEEK 1 — Sep 9-14, 2026
+  {week:1,label:'Regular Season',date:'2026-09-09T20:20:00',away:'NE', home:'SEA',time:'8:20 PM',tv:'NBC'},
+  {week:1,label:'Regular Season',date:'2026-09-10T20:35:00',away:'SF', home:'LAR',time:'8:35 PM',tv:'Netflix',note:'Melbourne Cricket Ground, Australia'},
+  {week:1,label:'Regular Season',date:'2026-09-13T13:00:00',away:'ATL',home:'PIT',time:'1:00 PM',tv:'FOX'},
+  {week:1,label:'Regular Season',date:'2026-09-13T13:00:00',away:'BAL',home:'IND',time:'1:00 PM',tv:'CBS'},
+  {week:1,label:'Regular Season',date:'2026-09-13T13:00:00',away:'BUF',home:'HOU',time:'1:00 PM',tv:'CBS'},
+  {week:1,label:'Regular Season',date:'2026-09-13T13:00:00',away:'CHI',home:'CAR',time:'1:00 PM',tv:'FOX'},
+  {week:1,label:'Regular Season',date:'2026-09-13T13:00:00',away:'CLE',home:'JAX',time:'1:00 PM',tv:'CBS'},
+  {week:1,label:'Regular Season',date:'2026-09-13T13:00:00',away:'NO', home:'DET',time:'1:00 PM',tv:'FOX'},
+  {week:1,label:'Regular Season',date:'2026-09-13T13:00:00',away:'NYJ',home:'TEN',time:'1:00 PM',tv:'CBS'},
+  {week:1,label:'Regular Season',date:'2026-09-13T13:00:00',away:'TB', home:'CIN',time:'1:00 PM',tv:'FOX'},
+  {week:1,label:'Regular Season',date:'2026-09-13T16:25:00',away:'ARI',home:'LAC',time:'4:25 PM',tv:'CBS'},
+  {week:1,label:'Regular Season',date:'2026-09-13T16:25:00',away:'GB', home:'MIN',time:'4:25 PM',tv:'CBS'},
+  {week:1,label:'Regular Season',date:'2026-09-13T16:25:00',away:'MIA',home:'LV', time:'4:25 PM',tv:'FOX'},
+  {week:1,label:'Regular Season',date:'2026-09-13T16:25:00',away:'WSH',home:'PHI',time:'4:25 PM',tv:'FOX'},
+  {week:1,label:'Regular Season',date:'2026-09-13T20:20:00',away:'DAL',home:'NYG',time:'8:20 PM',tv:'NBC'},
+  {week:1,label:'Regular Season',date:'2026-09-14T20:15:00',away:'DEN',home:'KC', time:'8:15 PM',tv:'ESPN/ABC'},
+
+  // WEEK 2 — Sep 17-21, 2026
+  {week:2,label:'Regular Season',date:'2026-09-17T20:15:00',away:'DET',home:'BUF',time:'8:15 PM',tv:'Prime Video'},
+  {week:2,label:'Regular Season',date:'2026-09-20T13:00:00',away:'CAR',home:'ATL',time:'1:00 PM',tv:'FOX'},
+  {week:2,label:'Regular Season',date:'2026-09-20T13:00:00',away:'MIN',home:'CHI',time:'1:00 PM',tv:'FOX'},
+  {week:2,label:'Regular Season',date:'2026-09-20T13:00:00',away:'PHI',home:'TEN',time:'1:00 PM',tv:'FOX'},
+  {week:2,label:'Regular Season',date:'2026-09-20T13:00:00',away:'PIT',home:'NE', time:'1:00 PM',tv:'CBS'},
+  {week:2,label:'Regular Season',date:'2026-09-20T13:00:00',away:'GB', home:'NYJ',time:'1:00 PM',tv:'FOX'},
+  {week:2,label:'Regular Season',date:'2026-09-20T13:00:00',away:'CLE',home:'TB', time:'1:00 PM',tv:'CBS'},
+  {week:2,label:'Regular Season',date:'2026-09-20T13:00:00',away:'NO', home:'BAL',time:'1:00 PM',tv:'CBS'},
+  {week:2,label:'Regular Season',date:'2026-09-20T13:00:00',away:'CIN',home:'HOU',time:'1:00 PM',tv:'CBS'},
+  {week:2,label:'Regular Season',date:'2026-09-20T16:05:00',away:'JAX',home:'DEN',time:'4:05 PM',tv:'CBS'},
+  {week:2,label:'Regular Season',date:'2026-09-20T16:05:00',away:'LV', home:'LAC',time:'4:05 PM',tv:'CBS'},
+  {week:2,label:'Regular Season',date:'2026-09-20T16:25:00',away:'WSH',home:'DAL',time:'4:25 PM',tv:'FOX'},
+  {week:2,label:'Regular Season',date:'2026-09-20T16:25:00',away:'SEA',home:'ARI',time:'4:25 PM',tv:'FOX'},
+  {week:2,label:'Regular Season',date:'2026-09-20T16:25:00',away:'MIA',home:'SF', time:'4:25 PM',tv:'FOX'},
+  {week:2,label:'Regular Season',date:'2026-09-20T20:20:00',away:'IND',home:'KC', time:'8:20 PM',tv:'NBC'},
+  {week:2,label:'Regular Season',date:'2026-09-21T20:15:00',away:'NYG',home:'LAR',time:'8:15 PM',tv:'ESPN/ABC'},
+
+  // WEEK 3 — Sep 24-28, 2026
+  {week:3,label:'Regular Season',date:'2026-09-24T20:15:00',away:'ATL',home:'GB', time:'8:15 PM',tv:'Prime Video'},
+  {week:3,label:'Regular Season',date:'2026-09-27T13:00:00',away:'LAC',home:'BUF',time:'1:00 PM',tv:'FOX'},
+  {week:3,label:'Regular Season',date:'2026-09-27T13:00:00',away:'CAR',home:'CLE',time:'1:00 PM',tv:'FOX'},
+  {week:3,label:'Regular Season',date:'2026-09-27T13:00:00',away:'NYJ',home:'DET',time:'1:00 PM',tv:'FOX'},
+  {week:3,label:'Regular Season',date:'2026-09-27T13:00:00',away:'HOU',home:'IND',time:'1:00 PM',tv:'CBS'},
+  {week:3,label:'Regular Season',date:'2026-09-27T13:00:00',away:'KC', home:'MIA',time:'1:00 PM',tv:'CBS'},
+  {week:3,label:'Regular Season',date:'2026-09-27T13:00:00',away:'TEN',home:'NYG',time:'1:00 PM',tv:'CBS'},
+  {week:3,label:'Regular Season',date:'2026-09-27T13:00:00',away:'CIN',home:'PIT',time:'1:00 PM',tv:'CBS'},
+  {week:3,label:'Regular Season',date:'2026-09-27T13:00:00',away:'SEA',home:'WSH',time:'1:00 PM',tv:'FOX'},
+  {week:3,label:'Regular Season',date:'2026-09-27T13:00:00',away:'NE', home:'JAX',time:'1:00 PM',tv:'CBS'},
+  {week:3,label:'Regular Season',date:'2026-09-27T16:05:00',away:'ARI',home:'SF', time:'4:05 PM',tv:'FOX'},
+  {week:3,label:'Regular Season',date:'2026-09-27T16:05:00',away:'MIN',home:'TB', time:'4:05 PM',tv:'FOX'},
+  {week:3,label:'Regular Season',date:'2026-09-27T16:25:00',away:'BAL',home:'DAL',time:'4:25 PM',tv:'CBS',note:'Maracana Stadium, Rio de Janeiro, Brazil'},
+  {week:3,label:'Regular Season',date:'2026-09-27T16:25:00',away:'LV', home:'NO', time:'4:25 PM',tv:'CBS'},
+  {week:3,label:'Regular Season',date:'2026-09-27T20:20:00',away:'LAR',home:'DEN',time:'8:20 PM',tv:'NBC'},
+  {week:3,label:'Regular Season',date:'2026-09-28T20:15:00',away:'PHI',home:'CHI',time:'8:15 PM',tv:'ESPN/ABC'},
+
+  // WEEKS 4-18 date ranges (matchups to be loaded from ESPN API once published)
+  {week:4, label:'Regular Season',date:'2026-10-01',away:'TBD',home:'TBD',time:'TBD',tv:''},
+  {week:5, label:'Regular Season',date:'2026-10-08',away:'TBD',home:'TBD',time:'TBD',tv:''},
+  {week:6, label:'Regular Season',date:'2026-10-15',away:'TBD',home:'TBD',time:'TBD',tv:''},
+  {week:7, label:'Regular Season',date:'2026-10-22',away:'TBD',home:'TBD',time:'TBD',tv:''},
+  {week:8, label:'Regular Season',date:'2026-10-29',away:'TBD',home:'TBD',time:'TBD',tv:''},
+  {week:9, label:'Regular Season',date:'2026-11-05',away:'TBD',home:'TBD',time:'TBD',tv:''},
+  {week:10,label:'Regular Season',date:'2026-11-12',away:'TBD',home:'TBD',time:'TBD',tv:''},
+  {week:11,label:'Regular Season',date:'2026-11-19',away:'TBD',home:'TBD',time:'TBD',tv:''},
+  {week:12,label:'Regular Season',date:'2026-11-26',away:'TBD',home:'TBD',time:'TBD',tv:''},
+  {week:13,label:'Regular Season',date:'2026-12-03',away:'TBD',home:'TBD',time:'TBD',tv:''},
+  {week:14,label:'Regular Season',date:'2026-12-10',away:'TBD',home:'TBD',time:'TBD',tv:''},
+  {week:15,label:'Regular Season',date:'2026-12-17',away:'TBD',home:'TBD',time:'TBD',tv:''},
+  {week:16,label:'Regular Season',date:'2026-12-24',away:'TBD',home:'TBD',time:'TBD',tv:''},
+  {week:17,label:'Regular Season',date:'2026-12-31',away:'TBD',home:'TBD',time:'TBD',tv:''},
+  {week:18,label:'Regular Season',date:'2027-01-07',away:'TBD',home:'TBD',time:'TBD',tv:''}
+];
+
 var POS_MAP = {
   OL:['OT','OG','C','G','T','OL'],
   DL:['DT','DE','NT','DL'],
@@ -688,7 +772,7 @@ function initStandings(){
 }
 
 // ====================================================
-// SCHEDULE — with date-year validation to catch ESPN returning stale data
+// SCHEDULE — tries ESPN API first, falls back to scraped 2026 static data
 // ====================================================
 ge('schedLoadBtn').onclick = loadSchedule;
 var SEASON_TYPE_LABELS = {1:'Preseason', 2:'Regular Season', 3:'Postseason'};
@@ -707,18 +791,28 @@ function loadSchedule(){
     fetchSchedule(season, week, team, parseInt(typeVal,10), season, function(events, seasonType){
       renderSchedule(events, season, seasonType, infoEl);
     }, function(){
-      ge('schedTable').innerHTML = empty('No games found for the '+season+' NFL season (type '+typeVal+').',
-        'ESPN may not have published this data yet.');
+      // If ESPN fails for a non-auto type on 2026, fall back to static
+      if(season === 2026){
+        renderStaticSchedule2026(week, team, infoEl);
+      } else {
+        ge('schedTable').innerHTML = empty('No games found for the '+season+' NFL season (type '+typeVal+').',
+          'ESPN may not have published this data yet.');
+      }
     });
   }
 }
 
 function trySeasonTypes(season, week, team, types, infoEl){
   if(!types.length){
-    ge('schedTable').innerHTML = empty(
-      'No '+season+' NFL schedule data available yet.',
-      'ESPN hasn\'t published the '+season+' season schedule yet. The preseason typically opens in early August. Check back soon!'
-    );
+    // All ESPN attempts failed — use static 2026 data if applicable
+    if(season === 2026){
+      renderStaticSchedule2026(week, team, infoEl);
+    } else {
+      ge('schedTable').innerHTML = empty(
+        'No '+season+' NFL schedule data available yet.',
+        'ESPN has not published this season schedule yet. Check back soon!'
+      );
+    }
     return;
   }
   var type = types[0], rest = types.slice(1);
@@ -729,8 +823,6 @@ function trySeasonTypes(season, week, team, types, infoEl){
   });
 }
 
-// KEY FIX: after fetching, validate that at least one game date matches the requested season year.
-// ESPN silently returns prior-season data when the requested season isn't available yet.
 function fetchSchedule(season, week, team, seasonType, expectedYear, onSuccess, onFail){
   var url = ESPN+'/scoreboard?season='+season+'&seasontype='+seasonType+'&limit=300';
   if(week) url += '&week='+week;
@@ -747,12 +839,11 @@ function fetchSchedule(season, week, team, seasonType, expectedYear, onSuccess, 
       });
     }
     if(!events.length){ onFail(); return; }
-    // Date validation: reject if ALL games belong to a different year
+    // Validate: reject if ALL games belong to a different year (ESPN stale-data bug)
     var hasCorrectYear = false;
     for(var i=0;i<events.length;i++){
       if(events[i].date){
         var yr = new Date(events[i].date).getFullYear();
-        // NFL seasons span two calendar years (Aug-Feb), so accept expectedYear and expectedYear-1
         if(yr === expectedYear || yr === expectedYear - 1){
           hasCorrectYear = true; break;
         }
@@ -761,6 +852,53 @@ function fetchSchedule(season, week, team, seasonType, expectedYear, onSuccess, 
     if(!hasCorrectYear){ onFail(); return; }
     onSuccess(events, seasonType);
   });
+}
+
+// ── Render static scraped 2026 schedule ──────────────────
+function renderStaticSchedule2026(weekFilter, teamFilter, infoEl){
+  var games = SCHEDULE_2026;
+  if(weekFilter){
+    var wn = parseInt(weekFilter, 10);
+    games = games.filter(function(g){ return g.week === wn; });
+  }
+  if(teamFilter){
+    games = games.filter(function(g){
+      return g.away === teamFilter || g.home === teamFilter;
+    });
+  }
+  infoEl.className = 'info-banner amber';
+  infoEl.style.display = 'block';
+  infoEl.innerHTML = '\uD83D\uDCC5 Showing <strong>2026 NFL Schedule</strong> (scraped from ESPN \u2014 live scores available once games begin). '
+    + games.length+' game'+(games.length!==1?'s':'')+' shown.';
+  if(!games.length){
+    ge('schedTable').innerHTML = empty('No games match your filters.');
+    return;
+  }
+  var rows = '';
+  for(var i=0;i<games.length;i++){
+    var g = games[i];
+    var rawDate = g.date ? new Date(g.date) : null;
+    var dateStr = rawDate && !isNaN(rawDate)
+      ? rawDate.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'})
+      : String(g.date||'\u2014');
+    var timeStr = g.time || '';
+    var isTBD = g.away === 'TBD';
+    var awayImg = !isTBD ? '<img src="'+logo(g.away)+'" width="22" height="22" style="object-fit:contain;border-radius:4px" loading="lazy" onerror="this.style.opacity=\'.1\'"> ' : '';
+    var homeImg = !isTBD ? '<img src="'+logo(g.home)+'" width="22" height="22" style="object-fit:contain;border-radius:4px" loading="lazy" onerror="this.style.opacity=\'.1\'"> ' : '';
+    var noteCell = g.note ? '<span style="font-size:.78rem;color:var(--gold)">\uD83C\uDF0D '+h(g.note)+'</span>' : '';
+    rows += '<tr>'
+      + '<td style="color:var(--muted);font-size:.83rem;white-space:nowrap">'+h(dateStr)+(timeStr&&!isTBD?'<br><span style="font-size:.76rem">'+h(timeStr)+'</span>':'')+'</td>'
+      + '<td class="td-name">'+awayImg+h(g.away)+'</td>'
+      + '<td class="td-num" style="color:var(--muted);font-size:.8rem">@</td>'
+      + '<td class="td-name">'+homeImg+h(g.home)+'</td>'
+      + '<td style="color:var(--muted);font-size:.82rem">'+h(g.tv||'')+'</td>'
+      + '<td>'+noteCell+'</td>'
+      + '<td class="td-num" style="color:var(--muted)">'+h(g.week)+'</td>'
+      + '</tr>';
+  }
+  ge('schedTable').innerHTML = '<table><thead><tr>'
+    + '<th>Date</th><th>Away</th><th></th><th>Home</th><th>TV</th><th>Note</th><th>Wk</th>'
+    + '</tr></thead><tbody>'+rows+'</tbody></table>';
 }
 
 function renderSchedule(events, season, seasonType, infoEl){
@@ -819,7 +957,7 @@ function loadLive(){
     var events = data.events||[], week = data.week&&data.week.number;
     ge('liveWeekBadge').textContent = week?'Week '+week:'\u2014';
     if(!events.length){
-      ge('liveGamesGrid').innerHTML = empty('No games today.','The 2026 NFL regular season starts September 4, 2026.'); return;
+      ge('liveGamesGrid').innerHTML = empty('No games today.','The 2026 NFL regular season starts September 9, 2026.'); return;
     }
     var html = '';
     for(var i=0;i<events.length;i++){
