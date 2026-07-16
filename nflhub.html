@@ -23,15 +23,13 @@ input,select,button{font:inherit;color:var(--text)}
 h1,h2,h3{line-height:1.2}
 a{color:var(--accent);text-decoration:none}
 
-/* ── TOPBAR ── */
 .topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;
   background:var(--s2);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;
   backdrop-filter:blur(16px)}
 .brand{display:flex;align-items:center;gap:12px}
 .brand h1{font-size:1.4rem;font-weight:900;letter-spacing:-.03em}
 .brand h1 span{color:var(--accent)}
-.brand-logo{width:36px;height:36px;background:var(--accent);border-radius:10px;
-  display:grid;place-items:center}
+.brand-logo{width:36px;height:36px;background:var(--accent);border-radius:10px;display:grid;place-items:center}
 .brand-logo svg{width:22px;height:22px}
 .topbar-right{display:flex;align-items:center;gap:10px}
 .badge-season{background:var(--accent);color:#fff;padding:3px 10px;border-radius:20px;font-size:.8rem;font-weight:700}
@@ -40,7 +38,6 @@ a{color:var(--accent);text-decoration:none}
 .icon-btn svg{width:18px;height:18px;display:block}
 .icon-btn:hover{background:var(--border)}
 
-/* ── NAV ── */
 .nav-bar{display:flex;gap:6px;padding:14px 24px;background:var(--s2);
   border-bottom:1px solid var(--border);overflow-x:auto;-webkit-overflow-scrolling:touch}
 .nav-pill{background:transparent;border:1.5px solid var(--border-2);border-radius:30px;
@@ -48,12 +45,10 @@ a{color:var(--accent);text-decoration:none}
 .nav-pill:hover{border-color:var(--accent);color:var(--text)}
 .nav-pill.active{background:var(--accent);border-color:var(--accent);color:#fff}
 
-/* ── MAIN ── */
 .main{padding:24px;max-width:1400px;margin:0 auto}
 .view{display:none;flex-direction:column;gap:24px}
 .view.active{display:flex}
 
-/* ── FILTER BAR ── */
 .filter-bar{display:flex;flex-wrap:wrap;gap:12px;padding:16px 20px;
   background:var(--s2);border:1px solid var(--border);border-radius:var(--r)}
 .filter-bar label{font-size:.82rem;font-weight:600;color:var(--muted);display:flex;flex-direction:column;gap:6px;flex:1;min-width:140px}
@@ -63,14 +58,12 @@ select,.search-input{
 select:focus,.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.2)}
 .search-input::placeholder{color:var(--muted)}
 
-/* ── BUTTONS ── */
 .btn{padding:9px 20px;border-radius:var(--r-xs);border:none;cursor:pointer;font-weight:600;font-size:.9rem;transition:.15s}
 .btn-primary{background:var(--accent);color:#fff}
 .btn-primary:hover{background:var(--accent-2)}
 .btn-ghost{background:var(--s3);color:var(--text);border:1px solid var(--border-2)}
 .btn-ghost:hover{background:var(--border)}
 
-/* ── TEAM GRID ── */
 .team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
 .team-card{display:flex;align-items:center;gap:14px;padding:16px 18px;
   background:var(--s2);border:1.5px solid var(--border);border-radius:var(--r);
@@ -83,7 +76,6 @@ select:focus,.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px
 .team-abbr{font-size:.78rem;color:var(--muted);margin-top:2px}
 .team-record{font-size:.82rem;font-weight:700;color:var(--accent);margin-top:4px}
 
-/* ── PLAYER GRID ── */
 .player-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
 .player-card{display:flex;align-items:center;gap:12px;padding:12px 14px;
   background:var(--s2);border:1.5px solid var(--border);border-radius:var(--r);
@@ -96,7 +88,6 @@ select:focus,.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px
 .player-meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:4px}
 .pos-badge{background:var(--s3);border:1px solid var(--border-2);border-radius:5px;padding:2px 7px;font-size:.73rem;font-weight:700;color:var(--accent)}
 
-/* ── DETAIL PANEL ── */
 .detail-panel{display:none;background:var(--s2);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:24px;position:relative;flex-direction:column;gap:16px}
 .detail-panel.open{display:flex}
 .detail-panel-close{position:absolute;top:16px;right:16px}
@@ -107,7 +98,6 @@ select:focus,.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px
 .divider{height:1px;background:var(--border)}
 .section-title{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
 
-/* ── TABLE ── */
 .table-wrap{overflow-x:auto;border-radius:var(--r);border:1px solid var(--border)}
 .table-wrap table{width:100%;border-collapse:collapse;font-size:.88rem}
 .table-wrap th{background:var(--s3);padding:10px 14px;text-align:left;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);white-space:nowrap}
@@ -120,20 +110,18 @@ select:focus,.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px
 .val-neg{color:var(--red)}
 .val-gold{color:var(--gold)}
 
-/* ── STANDINGS ── */
 .conf-wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .conf-block{background:var(--s2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
 .conf-title{padding:14px 20px;font-size:1.05rem;font-weight:800;background:var(--s3);border-bottom:1px solid var(--border)}
 
-/* ── CHIP ── */
 .chip{display:inline-block;padding:3px 10px;border-radius:20px;font-size:.78rem;font-weight:600;background:var(--s3);color:var(--muted)}
 .chip.accent{background:rgba(239,68,68,.15);color:var(--red)}
 .chip.gold{background:rgba(245,158,11,.15);color:var(--gold)}
 
-/* ── INFO BANNER ── */
-.info-banner{padding:12px 16px;border-radius:var(--r-xs);background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.3);color:var(--accent);font-size:.87rem;font-weight:500}
+.info-banner{padding:12px 16px;border-radius:var(--r-xs);font-size:.87rem;font-weight:500}
+.info-banner.blue{background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.3);color:var(--accent)}
+.info-banner.amber{background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);color:var(--gold)}
 
-/* ── LIVE ── */
 .live-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .live-dot{width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red);animation:pulse 1.2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
@@ -150,7 +138,6 @@ select:focus,.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px
 .lgc-score{font-size:1.4rem;font-weight:900;font-variant-numeric:tabular-nums}
 .lgc-div{height:1px;background:var(--border)}
 
-/* ── PLAYS ── */
 .plays-wrap{display:flex;flex-direction:column;gap:8px;max-height:500px;overflow-y:auto;padding-right:4px}
 .play-row{padding:10px 14px;background:var(--s3);border-radius:var(--r-xs)}
 .play-row-meta{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:5px}
@@ -158,11 +145,11 @@ select:focus,.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px
 .play-chip.scoring{background:rgba(34,197,94,.15);color:var(--green);border-color:rgba(34,197,94,.3)}
 .play-desc{font-size:.87rem;color:var(--text);line-height:1.5}
 
-/* ── MISC ── */
 .spinner{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite;margin:32px auto}
 @keyframes spin{to{transform:rotate(360deg)}}
 .empty{text-align:center;padding:48px 24px;color:var(--muted)}
 .empty h3{font-size:1.1rem;font-weight:700;margin-bottom:8px;color:var(--text)}
+.empty p{font-size:.88rem;margin-top:6px}
 
 @media(max-width:900px){
   .conf-wrap{grid-template-columns:1fr}
@@ -222,17 +209,10 @@ select:focus,.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px
     <label>Position
       <select id="playerPosFilter">
         <option value="">All positions</option>
-        <option value="QB">QB</option>
-        <option value="RB">RB</option>
-        <option value="WR">WR</option>
-        <option value="TE">TE</option>
-        <option value="OL">OL</option>
-        <option value="DL">DL</option>
-        <option value="LB">LB</option>
-        <option value="CB">CB</option>
-        <option value="S">Safety</option>
-        <option value="K">K</option>
-        <option value="P">P</option>
+        <option value="QB">QB</option><option value="RB">RB</option><option value="WR">WR</option>
+        <option value="TE">TE</option><option value="OL">OL</option><option value="DL">DL</option>
+        <option value="LB">LB</option><option value="CB">CB</option><option value="S">Safety</option>
+        <option value="K">K</option><option value="P">P</option>
       </select>
     </label>
     <label>Name<input class="search-input" id="playerSearch" type="text" placeholder="Player name..." autocomplete="off"></label>
@@ -301,7 +281,7 @@ select:focus,.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px
     </label>
     <button class="btn btn-primary" id="schedLoadBtn" style="margin-top:22px">Load</button>
   </div>
-  <div id="schedInfo" class="info-banner" style="display:none"></div>
+  <div id="schedInfo" class="info-banner blue" style="display:none"></div>
   <div id="schedTable" class="table-wrap"><div class="spinner"></div></div>
 </section>
 
@@ -310,7 +290,7 @@ select:focus,.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px
     <div style="display:flex;align-items:center;gap:10px">
       <span class="live-dot"></span>
       <h2 style="font-size:1.3rem;font-weight:800">Live Scoreboard</h2>
-      <span class="chip" id="liveWeekBadge">Week —</span>
+      <span class="chip" id="liveWeekBadge">Week &mdash;</span>
     </div>
     <div style="display:flex;gap:10px;align-items:center">
       <button class="btn btn-ghost" id="liveRefreshBtn">&#x27F3; Refresh</button>
@@ -328,10 +308,6 @@ select:focus,.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px
 </main>
 
 <script>
-// ====================================================
-// NFL HUB — MAIN SCRIPT
-// ====================================================
-
 var ESPN = 'https://site.api.espn.com/apis/site/v2/sports/football/nfl';
 
 var TEAMS = [
@@ -376,15 +352,13 @@ var POS_MAP = {
   S: ['SS','FS','S']
 };
 
-// ── helpers ─────────────────────────────────────────
 function ge(id){ return document.getElementById(id); }
-function qs(sel){ return document.querySelector(sel); }
 function qsa(sel){ return Array.prototype.slice.call(document.querySelectorAll(sel)); }
-function h(s){ return String(s==null?'—':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function h(s){ return String(s==null?'\u2014':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 function logo(abbr){ return 'https://a.espncdn.com/i/teamlogos/nfl/500/'+abbr.toLowerCase()+'.png'; }
 function face(id){ return 'https://a.espncdn.com/i/headshots/nfl/players/full/'+id+'.png'; }
 function spin(){ return '<div class="spinner"></div>'; }
-function empty(msg){ return '<div class="empty"><h3>'+h(msg)+'</h3></div>'; }
+function empty(msg,sub){ return '<div class="empty"><h3>'+h(msg)+'</h3>'+(sub?'<p>'+h(sub)+'</p>':'')+'</div>'; }
 
 function get(url, done){
   var xhr = new XMLHttpRequest();
@@ -402,7 +376,7 @@ function get(url, done){
   xhr.send();
 }
 
-// ── theme ────────────────────────────────────────────
+// ── theme ──────────────────────────────────────────
 var dark = true;
 ge('themeBtn').onclick = function(){
   dark = !dark;
@@ -412,7 +386,6 @@ ge('themeBtn').onclick = function(){
     : '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
 };
 
-// ── populate team selects ───────────────────────────
 (function(){
   var opts = '';
   for(var i=0;i<TEAMS.length;i++){
@@ -422,7 +395,6 @@ ge('themeBtn').onclick = function(){
   ge('schedTeam').innerHTML += opts;
 })();
 
-// ── nav ──────────────────────────────────────────────
 var initiated = {};
 qsa('.nav-pill').forEach(function(btn){
   btn.addEventListener('click', function(){
@@ -440,8 +412,6 @@ qsa('.nav-pill').forEach(function(btn){
     }
   });
 });
-
-// auto-init teams
 initiated['teams'] = true;
 initTeams();
 
@@ -449,21 +419,15 @@ initTeams();
 // TEAMS
 // ====================================================
 var teamRecords = {};
-
 function initTeams(){
-  get(ESPN+'/scoreboard', function(err, data){
-    renderTeams();
-  });
+  get(ESPN+'/scoreboard', function(){ renderTeams(); });
   get('https://site.api.espn.com/apis/v2/sports/football/nfl/standings?season=2025', function(err, data){
     if(err || !data) return;
     var confs = data.children || [];
     for(var i=0;i<confs.length;i++){
       var entries = (confs[i].standings && confs[i].standings.entries) || [];
       for(var j=0;j<entries.length;j++){
-        var e = entries[j];
-        var abbr = e.team && e.team.abbreviation;
-        var stats = e.stats || [];
-        var w='', l='';
+        var e = entries[j], abbr = e.team && e.team.abbreviation, stats = e.stats || [], w='', l='';
         for(var k=0;k<stats.length;k++){
           if(stats[k].name==='wins') w = stats[k].value;
           if(stats[k].name==='losses') l = stats[k].value;
@@ -478,14 +442,12 @@ function initTeams(){
   ge('teamSearch').oninput  = renderTeams;
   ge('teamSearch').onkeyup  = renderTeams;
 }
-
 function renderTeams(){
-  var conf = ge('confFilter').value;
-  var div  = ge('divFilter').value;
-  var q    = ge('teamSearch').value.toLowerCase().trim();
+  var conf = ge('confFilter').value, div = ge('divFilter').value;
+  var q = ge('teamSearch').value.toLowerCase().trim();
   var list = TEAMS.filter(function(t){
-    if(conf && t.conf !== conf) return false;
-    if(div  && t.div  !== div)  return false;
+    if(conf && t.conf!==conf) return false;
+    if(div  && t.div!==div)  return false;
     if(q && t.name.toLowerCase().indexOf(q)===-1 && t.abbr.toLowerCase().indexOf(q)===-1) return false;
     return true;
   });
@@ -505,11 +467,8 @@ function renderTeams(){
     card.onclick = function(){ openTeam(card.getAttribute('data-tid'), card.getAttribute('data-abbr')); };
   });
 }
-
 function openTeam(tid, abbr){
-  qsa('#teamGrid .team-card').forEach(function(c){
-    c.classList.toggle('selected', c.getAttribute('data-abbr')===abbr);
-  });
+  qsa('#teamGrid .team-card').forEach(function(c){ c.classList.toggle('selected', c.getAttribute('data-abbr')===abbr); });
   var panel = ge('teamDetail');
   panel.classList.add('open');
   panel.scrollIntoView({behavior:'smooth',block:'nearest'});
@@ -523,8 +482,7 @@ function openTeam(tid, abbr){
   ge('teamRoster').innerHTML = spin();
   get(ESPN+'/teams/'+tid+'/roster', function(err, data){
     if(err || !data){ ge('teamRoster').innerHTML = empty('Could not load roster.'); return; }
-    var groups = data.athletes || [];
-    var players = [];
+    var groups = data.athletes || [], players = [];
     for(var i=0;i<groups.length;i++){
       var items = groups[i].items || [];
       for(var j=0;j<items.length;j++) players.push(items[j]);
@@ -535,13 +493,13 @@ function openTeam(tid, abbr){
       var p = players[i];
       rows += '<tr>'
         + '<td><img src="'+face(p.id)+'" width="30" height="34" style="border-radius:6px;object-fit:cover;vertical-align:middle" loading="lazy" onerror="this.style.opacity=\'.1\'"></td>'
-        + '<td class="td-num">'+h(p.jersey||'—')+'</td>'
+        + '<td class="td-num">'+h(p.jersey||'\u2014')+'</td>'
         + '<td style="font-weight:600;white-space:nowrap">'+h(p.displayName)+'</td>'
-        + '<td><span class="pos-badge">'+h((p.position&&p.position.abbreviation)||'—')+'</span></td>'
-        + '<td>'+h(p.displayHeight||'—')+'</td>'
-        + '<td>'+h(p.displayWeight||'—')+'</td>'
-        + '<td>'+(p.experience?h(p.experience.years):'—')+'</td>'
-        + '<td style="color:var(--muted);font-size:.83rem">'+h((p.college&&p.college.name)||'—')+'</td>'
+        + '<td><span class="pos-badge">'+h((p.position&&p.position.abbreviation)||'\u2014')+'</span></td>'
+        + '<td>'+h(p.displayHeight||'\u2014')+'</td>'
+        + '<td>'+h(p.displayWeight||'\u2014')+'</td>'
+        + '<td>'+(p.experience?h(p.experience.years):'\u2014')+'</td>'
+        + '<td style="color:var(--muted);font-size:.83rem">'+h((p.college&&p.college.name)||'\u2014')+'</td>'
         + '</tr>';
     }
     ge('teamRoster').innerHTML = '<table><thead><tr>'
@@ -557,14 +515,9 @@ ge('closeTeamDetail').onclick = function(){
 // ====================================================
 // PLAYERS
 // ====================================================
-var allPlayers = [];
-var playersReady = false;
-var loadedTeams = 0;
-
+var allPlayers = [], playersReady = false, loadedTeams = 0;
 function initPlayers(){
-  allPlayers = [];
-  playersReady = false;
-  loadedTeams = 0;
+  allPlayers = []; playersReady = false; loadedTeams = 0;
   ge('playerGrid').innerHTML = spin();
   ge('playerStatus').textContent = 'Loading all 32 team rosters... 0%';
   ge('playerTeamFilter').onchange = applyPlayerFilters;
@@ -573,7 +526,6 @@ function initPlayers(){
   ge('playerSearch').onkeyup      = applyPlayerFilters;
   loadNextBatch(0);
 }
-
 function loadNextBatch(offset){
   var batch = TEAMS.slice(offset, offset+4);
   if(!batch.length){ onAllLoaded(); return; }
@@ -587,8 +539,7 @@ function loadNextBatch(offset){
             var items = groups[g].items || [];
             for(var k=0;k<items.length;k++){
               var p = items[k];
-              p._teamAbbr = team.abbr;
-              p._teamName = team.name;
+              p._teamAbbr = team.abbr; p._teamName = team.name;
               allPlayers.push(p);
             }
           }
@@ -602,124 +553,71 @@ function loadNextBatch(offset){
     })(batch[i]);
   }
 }
-
-function onAllLoaded(){
-  playersReady = true;
-  renderPlayers();
-}
-
-function applyPlayerFilters(){
-  if(!playersReady) return;
-  renderPlayers();
-}
-
+function onAllLoaded(){ playersReady = true; renderPlayers(); }
+function applyPlayerFilters(){ if(!playersReady) return; renderPlayers(); }
 function renderPlayers(){
-  var teamVal = ge('playerTeamFilter').value;
-  var posVal  = ge('playerPosFilter').value;
-  var q       = ge('playerSearch').value.toLowerCase().trim();
-
+  var teamVal = ge('playerTeamFilter').value, posVal = ge('playerPosFilter').value;
+  var q = ge('playerSearch').value.toLowerCase().trim();
   var list = allPlayers;
-
-  if(teamVal){
-    list = list.filter(function(p){ return p._teamAbbr === teamVal; });
-  }
+  if(teamVal) list = list.filter(function(p){ return p._teamAbbr===teamVal; });
   if(posVal){
-    var allowed = POS_MAP[posVal] || [posVal];
+    var allowed = POS_MAP[posVal]||[posVal];
     list = list.filter(function(p){
-      var pa = ((p.position && p.position.abbreviation) || '').toUpperCase();
+      var pa = ((p.position&&p.position.abbreviation)||'').toUpperCase();
       for(var i=0;i<allowed.length;i++){ if(allowed[i]===pa) return true; }
       return false;
     });
   }
-  if(q){
-    list = list.filter(function(p){
-      return (p.displayName||'').toLowerCase().indexOf(q) !== -1;
-    });
-  }
-
-  var total = list.length;
-  var show  = list.slice(0, 200);
-
-  if(playersReady){
-    ge('playerStatus').textContent = total + ' player'+(total!==1?'s':'')+' shown'
-      + (total>200?' (showing first 200)':'')+'.'
-  }
-
-  if(!show.length){
-    ge('playerGrid').innerHTML = empty('No players match your filters.');
-    return;
-  }
-
+  if(q) list = list.filter(function(p){ return (p.displayName||'').toLowerCase().indexOf(q)!==-1; });
+  var total = list.length, show = list.slice(0,200);
+  if(playersReady) ge('playerStatus').textContent = total+' player'+(total!==1?'s':'')+' shown'+(total>200?' (showing first 200)':'')+'.';
+  if(!show.length){ ge('playerGrid').innerHTML = empty('No players match your filters.'); return; }
   var html = '';
   for(var i=0;i<show.length;i++){
-    var p = show[i];
-    var posAbbr = (p.position && p.position.abbreviation) || '—';
-    var jersey  = p.jersey ? '#'+h(p.jersey) : '';
+    var p = show[i], posAbbr = (p.position&&p.position.abbreviation)||'\u2014', jersey = p.jersey?'#'+h(p.jersey):'';
     html += '<div class="player-card" data-pid="'+h(p.id)+'" tabindex="0">'
       + '<div class="player-photo-wrap">'
       + '<img class="player-photo" src="'+face(p.id)+'" alt="" loading="lazy" '
       + 'onerror="this.style.display=\'none\';this.nextSibling.style.display=\'grid\'">'
-      + '<div class="player-photo-fallback" style="display:none">'
-      + h((p.displayName||'?').charAt(0))+'</div></div>'
-      + '<div class="player-info">'
-      + '<div class="player-name">'+h(p.displayName)+'</div>'
-      + '<div class="player-meta">'
-      + '<span class="pos-badge">'+h(posAbbr)+'</span>'
-      + '<span>'+h(p._teamAbbr||'FA')+'</span>'
-      + (jersey?'<span>'+jersey+'</span>':'')
+      + '<div class="player-photo-fallback" style="display:none">'+h((p.displayName||'?').charAt(0))+'</div></div>'
+      + '<div class="player-info"><div class="player-name">'+h(p.displayName)+'</div>'
+      + '<div class="player-meta"><span class="pos-badge">'+h(posAbbr)+'</span>'
+      + '<span>'+h(p._teamAbbr||'FA')+'</span>'+(jersey?'<span>'+jersey+'</span>':'')
       + '</div></div></div>';
   }
   ge('playerGrid').innerHTML = html;
-
   qsa('#playerGrid .player-card').forEach(function(card){
     card.onclick = function(){ openPlayer(card.getAttribute('data-pid')); };
   });
 }
-
 function openPlayer(pid){
-  qsa('#playerGrid .player-card').forEach(function(c){
-    c.classList.toggle('selected', c.getAttribute('data-pid')===pid);
-  });
+  qsa('#playerGrid .player-card').forEach(function(c){ c.classList.toggle('selected', c.getAttribute('data-pid')===pid); });
   var panel = ge('playerDetail');
   panel.classList.add('open');
   panel.scrollIntoView({behavior:'smooth',block:'nearest'});
   var p = null;
   for(var i=0;i<allPlayers.length;i++){ if(allPlayers[i].id===pid){ p=allPlayers[i]; break; } }
-  var posName = (p && p.position && p.position.displayName) || '—';
-  var college = (p && p.college && p.college.name) || '';
-  ge('playerDetailHeader').innerHTML = '<img src="'+face(pid)+'" class="detail-photo" loading="lazy" '
-    + 'onerror="this.style.opacity=\'.1\'">'
-    + '<div class="detail-info">'
-    + '<h2>'+(p?h(p.displayName):'—')+'</h2>'
+  var posName = (p&&p.position&&p.position.displayName)||'\u2014', college = (p&&p.college&&p.college.name)||'';
+  ge('playerDetailHeader').innerHTML = '<img src="'+face(pid)+'" class="detail-photo" loading="lazy" onerror="this.style.opacity=\'.1\'">'
+    + '<div class="detail-info"><h2>'+(p?h(p.displayName):'\u2014')+'</h2>'
     + '<p>'+h(posName)+' \xb7 '+h(p?p._teamName:'')+'</p>'
     + (p&&p.jersey?'<p>#'+h(p.jersey)+'</p>':'')
     + '<p>'+h(p&&p.displayHeight||'')+' / '+h(p&&p.displayWeight||'')+'</p>'
-    + (college?'<p>'+h(college)+'</p>':'')
-    + '</div>';
+    + (college?'<p>'+h(college)+'</p>':'')+'</div>';
   ge('playerStatTable').innerHTML = spin();
-  get('https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/'+pid+'/overview',
-    function(err, data){
-      if(err || !data || !data.statistics){
-        ge('playerStatTable').innerHTML = empty('Stats not available.'); return;
-      }
-      var st = data.statistics;
-      var labels = st.displayNames || st.names || st.labels || [];
-      var splits = st.splits || [];
-      var season = null;
-      for(var i=0;i<splits.length;i++){
-        if(splits[i].displayName==='Regular Season'){ season=splits[i]; break; }
-      }
-      if(!season && splits.length) season=splits[0];
-      if(!season || !labels.length){ ge('playerStatTable').innerHTML = empty('No stats.'); return; }
-      var vals = season.stats || [];
-      var thead = '<tr>';
-      for(var i=0;i<labels.length;i++) thead += '<th>'+h(labels[i])+'</th>';
-      thead += '</tr>';
-      var tbody = '<tr>';
-      for(var i=0;i<vals.length;i++) tbody += '<td class="td-num">'+h(vals[i])+'</td>';
-      tbody += '</tr>';
-      ge('playerStatTable').innerHTML = '<table><thead>'+thead+'</thead><tbody>'+tbody+'</tbody></table>';
-    });
+  get('https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/'+pid+'/overview', function(err, data){
+    if(err||!data||!data.statistics){ ge('playerStatTable').innerHTML = empty('Stats not available.'); return; }
+    var st = data.statistics, labels = st.displayNames||st.names||st.labels||[], splits = st.splits||[], season = null;
+    for(var i=0;i<splits.length;i++){ if(splits[i].displayName==='Regular Season'){ season=splits[i]; break; } }
+    if(!season && splits.length) season=splits[0];
+    if(!season||!labels.length){ ge('playerStatTable').innerHTML = empty('No stats.'); return; }
+    var vals = season.stats||[], thead='<tr>', tbody='<tr>';
+    for(var i=0;i<labels.length;i++) thead += '<th>'+h(labels[i])+'</th>';
+    thead += '</tr>';
+    for(var i=0;i<vals.length;i++) tbody += '<td class="td-num">'+h(vals[i])+'</td>';
+    tbody += '</tr>';
+    ge('playerStatTable').innerHTML = '<table><thead>'+thead+'</thead><tbody>'+tbody+'</tbody></table>';
+  });
 }
 ge('closePlayerDetail').onclick = function(){
   ge('playerDetail').classList.remove('open');
@@ -731,40 +629,28 @@ ge('closePlayerDetail').onclick = function(){
 // ====================================================
 ge('statLoadBtn').onclick = loadStats;
 ge('statCat').onchange    = loadStats;
-
 function loadStats(){
-  var season = ge('statSeason').value;
-  var catKey = ge('statCat').value;
+  var season = ge('statSeason').value, catKey = ge('statCat').value;
   ge('statTable').innerHTML = spin();
   get(ESPN+'/statistics?season='+season+'&seasontype=2', function(err, data){
-    if(err || !data){ ge('statTable').innerHTML = empty('Could not load stats.'); return; }
-    var cats = (data.stats && data.stats.categories) || [];
-    var cat = null;
+    if(err||!data){ ge('statTable').innerHTML = empty('Could not load stats.'); return; }
+    var cats = (data.stats&&data.stats.categories)||[], cat = null;
     for(var i=0;i<cats.length;i++){ if(cats[i].name===catKey){ cat=cats[i]; break; } }
     if(!cat){ ge('statTable').innerHTML = empty('No data for "'+catKey+'" in '+season+'.'); return; }
-    var leaders = cat.leaders || [];
+    var leaders = cat.leaders||[];
     if(!leaders.length){ ge('statTable').innerHTML = empty('No leaders found.'); return; }
     var rows = '';
     for(var i=0;i<Math.min(leaders.length,50);i++){
-      var l   = leaders[i];
-      var ath = l.athlete || {};
-      var team = l.team || {};
-      var tabbr = team.abbreviation || '';
-      var hshot = (ath.headshot && ath.headshot.href) || face(ath.id);
+      var l=leaders[i], ath=l.athlete||{}, team=l.team||{}, tabbr=team.abbreviation||'';
+      var hshot = (ath.headshot&&ath.headshot.href)||face(ath.id);
       rows += '<tr>'
         + '<td class="td-num val-gold" style="font-size:1.1rem">'+(i+1)+'</td>'
-        + '<td class="td-name"><img src="'+hshot+'" width="32" height="32" '
-        + 'style="border-radius:8px;object-fit:cover" loading="lazy" onerror="this.style.opacity=\'.1\'">'
-        + h(ath.displayName||'—')+'</td>'
-        + '<td class="td-name">'
-        + (tabbr?'<img src="'+logo(tabbr)+'" width="22" height="22" style="object-fit:contain" loading="lazy" onerror="this.style.opacity=\'.1\'"> ':'' )
-        + h(tabbr||'—')+'</td>'
-        + '<td class="td-num" style="font-size:1.15rem;font-weight:800">'+h(l.displayValue||'—')+'</td>'
+        + '<td class="td-name"><img src="'+hshot+'" width="32" height="32" style="border-radius:8px;object-fit:cover" loading="lazy" onerror="this.style.opacity=\'.1\'">'+h(ath.displayName||'\u2014')+'</td>'
+        + '<td class="td-name">'+(tabbr?'<img src="'+logo(tabbr)+'" width="22" height="22" style="object-fit:contain" loading="lazy" onerror="this.style.opacity=\'.1\'"> ':'')+h(tabbr||'\u2014')+'</td>'
+        + '<td class="td-num" style="font-size:1.15rem;font-weight:800">'+h(l.displayValue||'\u2014')+'</td>'
         + '</tr>';
     }
-    ge('statTable').innerHTML = '<table><thead><tr>'
-      + '<th>Rank</th><th>Player</th><th>Team</th><th>'+h(cat.displayName)+'</th>'
-      + '</tr></thead><tbody>'+rows+'</tbody></table>';
+    ge('statTable').innerHTML = '<table><thead><tr><th>Rank</th><th>Player</th><th>Team</th><th>'+h(cat.displayName)+'</th></tr></thead><tbody>'+rows+'</tbody></table>';
   });
 }
 
@@ -774,47 +660,37 @@ function loadStats(){
 function initStandings(){
   ge('standingsWrap').innerHTML = spin();
   get('https://site.api.espn.com/apis/v2/sports/football/nfl/standings?season=2025', function(err, data){
-    if(err || !data){ ge('standingsWrap').innerHTML = empty('Could not load standings.'); return; }
-    var confs = data.children || [];
+    if(err||!data){ ge('standingsWrap').innerHTML = empty('Could not load standings.'); return; }
+    var confs = data.children||[];
     if(!confs.length){ ge('standingsWrap').innerHTML = empty('No standings data.'); return; }
     var html = '';
     for(var ci=0;ci<confs.length;ci++){
-      var conf = confs[ci];
-      var entries = (conf.standings && conf.standings.entries) || [];
-      var rows = '';
+      var conf = confs[ci], entries = (conf.standings&&conf.standings.entries)||[], rows = '';
       for(var ei=0;ei<entries.length;ei++){
-        var e    = entries[ei];
-        var team = e.team || {};
-        var stats = e.stats || [];
-        var sv = {};
-        for(var si=0;si<stats.length;si++) sv[stats[si].name] = stats[si].displayValue;
+        var e=entries[ei], team=e.team||{}, stats=e.stats||{}, sv={};
+        for(var si=0;si<stats.length;si++) sv[stats[si].name]=stats[si].displayValue;
         rows += '<tr>'
-          + '<td class="td-name">'
-          + '<img src="'+logo(team.abbreviation||'')+'" width="22" height="22" style="object-fit:contain;border-radius:4px" loading="lazy" onerror="this.style.opacity=\'.1\'">'
-          + h(team.shortDisplayName||team.abbreviation||'—')+'</td>'
-          + '<td class="td-num val-pos">'+h(sv.wins||'—')+'</td>'
-          + '<td class="td-num val-neg">'+h(sv.losses||'—')+'</td>'
+          + '<td class="td-name"><img src="'+logo(team.abbreviation||'')+'" width="22" height="22" style="object-fit:contain;border-radius:4px" loading="lazy" onerror="this.style.opacity=\'.1\'">'+h(team.shortDisplayName||team.abbreviation||'\u2014')+'</td>'
+          + '<td class="td-num val-pos">'+h(sv.wins||'\u2014')+'</td>'
+          + '<td class="td-num val-neg">'+h(sv.losses||'\u2014')+'</td>'
           + '<td class="td-num">'+h(sv.ties||'0')+'</td>'
-          + '<td class="td-num">'+h(sv.winPercent||'—')+'</td>'
-          + '<td class="td-num">'+h(sv.pointsFor||'—')+'</td>'
-          + '<td class="td-num">'+h(sv.pointsAgainst||'—')+'</td>'
-          + '<td class="td-num">'+h(sv.differential||'—')+'</td>'
+          + '<td class="td-num">'+h(sv.winPercent||'\u2014')+'</td>'
+          + '<td class="td-num">'+h(sv.pointsFor||'\u2014')+'</td>'
+          + '<td class="td-num">'+h(sv.pointsAgainst||'\u2014')+'</td>'
+          + '<td class="td-num">'+h(sv.differential||'\u2014')+'</td>'
           + '</tr>';
       }
       html += '<div class="conf-block"><div class="conf-title">'+h(conf.name||conf.abbreviation)+'</div>'
-        + '<table><thead><tr>'
-        + '<th>Team</th><th>W</th><th>L</th><th>T</th><th>PCT</th><th>PF</th><th>PA</th><th>DIFF</th>'
-        + '</tr></thead><tbody>'+rows+'</tbody></table></div>';
+        + '<table><thead><tr><th>Team</th><th>W</th><th>L</th><th>T</th><th>PCT</th><th>PF</th><th>PA</th><th>DIFF</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
     }
     ge('standingsWrap').innerHTML = html;
   });
 }
 
 // ====================================================
-// SCHEDULE — auto-detect season type with fallback
+// SCHEDULE — with date-year validation to catch ESPN returning stale data
 // ====================================================
 ge('schedLoadBtn').onclick = loadSchedule;
-
 var SEASON_TYPE_LABELS = {1:'Preseason', 2:'Regular Season', 3:'Postseason'};
 
 function loadSchedule(){
@@ -823,36 +699,39 @@ function loadSchedule(){
   var team    = ge('schedTeam').value;
   var typeVal = ge('schedType').value;
   var infoEl  = ge('schedInfo');
-
   ge('schedTable').innerHTML = spin();
   infoEl.style.display = 'none';
-
   if(typeVal === 'auto'){
     trySeasonTypes(season, week, team, [2, 1, 3], infoEl);
   } else {
-    fetchSchedule(season, week, team, parseInt(typeVal, 10), function(events, seasonType){
+    fetchSchedule(season, week, team, parseInt(typeVal,10), season, function(events, seasonType){
       renderSchedule(events, season, seasonType, infoEl);
     }, function(){
-      ge('schedTable').innerHTML = empty('No games found for '+season+' season type '+typeVal+'.');
+      ge('schedTable').innerHTML = empty('No games found for the '+season+' NFL season (type '+typeVal+').',
+        'ESPN may not have published this data yet.');
     });
   }
 }
 
 function trySeasonTypes(season, week, team, types, infoEl){
   if(!types.length){
-    ge('schedTable').innerHTML = empty('No schedule data found for the '+season+' NFL season yet. Check back closer to the preseason (August).');
+    ge('schedTable').innerHTML = empty(
+      'No '+season+' NFL schedule data available yet.',
+      'ESPN hasn\'t published the '+season+' season schedule yet. The preseason typically opens in early August. Check back soon!'
+    );
     return;
   }
-  var type = types[0];
-  var rest = types.slice(1);
-  fetchSchedule(season, week, team, type, function(events, seasonType){
+  var type = types[0], rest = types.slice(1);
+  fetchSchedule(season, week, team, type, season, function(events, seasonType){
     renderSchedule(events, season, seasonType, infoEl);
   }, function(){
     trySeasonTypes(season, week, team, rest, infoEl);
   });
 }
 
-function fetchSchedule(season, week, team, seasonType, onSuccess, onFail){
+// KEY FIX: after fetching, validate that at least one game date matches the requested season year.
+// ESPN silently returns prior-season data when the requested season isn't available yet.
+function fetchSchedule(season, week, team, seasonType, expectedYear, onSuccess, onFail){
   var url = ESPN+'/scoreboard?season='+season+'&seasontype='+seasonType+'&limit=300';
   if(week) url += '&week='+week;
   get(url, function(err, data){
@@ -860,56 +739,63 @@ function fetchSchedule(season, week, team, seasonType, onSuccess, onFail){
     var events = data.events || [];
     if(team){
       events = events.filter(function(ev){
-        var comps = (ev.competitions && ev.competitions[0] && ev.competitions[0].competitors) || [];
+        var comps = (ev.competitions&&ev.competitions[0]&&ev.competitions[0].competitors)||[];
         for(var i=0;i<comps.length;i++){
-          if(comps[i].team && comps[i].team.abbreviation===team) return true;
+          if(comps[i].team&&comps[i].team.abbreviation===team) return true;
         }
         return false;
       });
     }
     if(!events.length){ onFail(); return; }
+    // Date validation: reject if ALL games belong to a different year
+    var hasCorrectYear = false;
+    for(var i=0;i<events.length;i++){
+      if(events[i].date){
+        var yr = new Date(events[i].date).getFullYear();
+        // NFL seasons span two calendar years (Aug-Feb), so accept expectedYear and expectedYear-1
+        if(yr === expectedYear || yr === expectedYear - 1){
+          hasCorrectYear = true; break;
+        }
+      }
+    }
+    if(!hasCorrectYear){ onFail(); return; }
     onSuccess(events, seasonType);
   });
 }
 
 function renderSchedule(events, season, seasonType, infoEl){
   var typeLabel = SEASON_TYPE_LABELS[seasonType] || 'Season';
+  infoEl.className = 'info-banner blue';
   infoEl.style.display = 'block';
-  infoEl.innerHTML = '\uD83D\uDCC5 Showing <strong>'+season+' NFL '+typeLabel+'</strong> — '
-    + events.length+' game'+(events.length!==1?'s':'')+' found.'
-    + (seasonType===1?' Regular season kicks off September 4, 2026.':'');
-
+  infoEl.innerHTML = '\uD83D\uDCC5 Showing <strong>'+season+' NFL '+typeLabel+'</strong> \u2014 '
+    + events.length+' game'+(events.length!==1?'s':'')+' found.';
   if(!events.length){ ge('schedTable').innerHTML = empty('No games found.'); return; }
-
   var rows = '';
   for(var i=0;i<events.length;i++){
-    var ev   = events[i];
-    var comp = (ev.competitions && ev.competitions[0]) || {};
-    var comps = comp.competitors || [];
-    var away = null, home = null;
+    var ev = events[i], comp = (ev.competitions&&ev.competitions[0])||{}, comps = comp.competitors||[];
+    var away=null, home=null;
     for(var j=0;j<comps.length;j++){
-      if(comps[j].homeAway==='away') away=comps[j];
-      else home=comps[j];
+      if(comps[j].homeAway==='away') away=comps[j]; else home=comps[j];
     }
-    away = away || {}; home = home || {};
-    var status      = (comp.status && comp.status.type) || {};
-    var isLive      = status.name==='STATUS_IN_PROGRESS';
-    var isScheduled = status.name==='STATUS_SCHEDULED';
-    var awayAbbr    = (away.team && away.team.abbreviation) || '';
-    var homeAbbr    = (home.team && home.team.abbreviation) || '';
-    var rawDate     = ev.date ? new Date(ev.date) : null;
-    var dateStr     = rawDate ? rawDate.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'}) : '—';
-    var timeStr     = rawDate ? rawDate.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'}) : '';
-    var awayScore   = isScheduled ? '' : (away.score || '—');
-    var homeScore   = isScheduled ? '' : (home.score || '—');
+    away=away||{}; home=home||{};
+    var status = (comp.status&&comp.status.type)||{};
+    var isLive = status.name==='STATUS_IN_PROGRESS';
+    var isSched = status.name==='STATUS_SCHEDULED';
+    var awayAbbr = (away.team&&away.team.abbreviation)||'';
+    var homeAbbr = (home.team&&home.team.abbreviation)||'';
+    var rawDate = ev.date ? new Date(ev.date) : null;
+    var dateStr = rawDate ? rawDate.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'}) : '\u2014';
+    var timeStr = rawDate ? rawDate.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'}) : '';
+    var awayScore = isSched ? '' : (away.score||'\u2014');
+    var homeScore = isSched ? '' : (home.score||'\u2014');
     rows += '<tr'+(isLive?' style="background:rgba(239,68,68,.06)"':'')+'>'+
       '<td style="color:var(--muted);font-size:.83rem;white-space:nowrap">'+h(dateStr)+(timeStr?'<br><span style="font-size:.76rem">'+h(timeStr)+'</span>':'')+'</td>'+
-      '<td class="td-name">'+(awayAbbr?'<img src="'+logo(awayAbbr)+'" width="22" height="22" style="object-fit:contain;border-radius:4px" loading="lazy" onerror="this.style.opacity=\'.1\'"> ':'')+h(awayAbbr||'—')+'</td>'+
+      '<td class="td-name">'+(awayAbbr?'<img src="'+logo(awayAbbr)+'" width="22" height="22" style="object-fit:contain;border-radius:4px" loading="lazy" onerror="this.style.opacity=\'.1\'"> ':'')+h(awayAbbr||'\u2014')+'</td>'+
       '<td class="td-num"'+(away.winner?' style="color:var(--green);font-weight:800"':'')+'>'+h(awayScore)+'</td>'+
-      '<td class="td-name">'+(homeAbbr?'<img src="'+logo(homeAbbr)+'" width="22" height="22" style="object-fit:contain;border-radius:4px" loading="lazy" onerror="this.style.opacity=\'.1\'"> ':'')+h(homeAbbr||'—')+'</td>'+
+      '<td class="td-name">'+(homeAbbr?'<img src="'+logo(homeAbbr)+'" width="22" height="22" style="object-fit:contain;border-radius:4px" loading="lazy" onerror="this.style.opacity=\'.1\'"> ':'')+h(homeAbbr||'\u2014')+'</td>'+
       '<td class="td-num"'+(home.winner?' style="color:var(--green);font-weight:800"':'')+'>'+h(homeScore)+'</td>'+
-      '<td><span class="chip'+(isLive?' accent':isScheduled?' gold':'')+'>'+(isLive?'🔴 LIVE':h(status.shortDetail||'—'))+'</span></td>'+
-      '<td class="td-num" style="color:var(--muted)">'+h(ev.week&&ev.week.number||'—')+'</td>'+
+      '<td><span class="chip'+(isLive?' accent':isSched?' gold':'')+'>'+(isLive?'\uD83D\uDD34 LIVE':h(status.shortDetail||'\u2014'))+'</span></td>'+
+      '<td class="td-num" style="color:var(--muted)">'+h(ev.week&&ev.week.number||'\u2014')+'</td>'+
       '</tr>';
   }
   ge('schedTable').innerHTML = '<table><thead><tr>'+
@@ -921,59 +807,37 @@ function renderSchedule(events, season, seasonType, infoEl){
 // LIVE
 // ====================================================
 var autoTimer = null;
-
 ge('liveRefreshBtn').onclick = loadLive;
 ge('liveAutoBtn').onclick = function(){
   var btn = ge('liveAutoBtn');
-  if(autoTimer){
-    clearInterval(autoTimer);
-    autoTimer = null;
-    btn.textContent = 'Auto OFF';
-  } else {
-    loadLive();
-    autoTimer = setInterval(loadLive, 30000);
-    btn.textContent = 'Auto ON';
-  }
+  if(autoTimer){ clearInterval(autoTimer); autoTimer=null; btn.textContent='Auto OFF'; }
+  else { loadLive(); autoTimer=setInterval(loadLive,30000); btn.textContent='Auto ON'; }
 };
-
 function loadLive(){
   get(ESPN+'/scoreboard', function(err, data){
-    if(err || !data){ ge('liveGamesGrid').innerHTML = empty('Could not load scoreboard.'); return; }
-    var events = data.events || [];
-    var week = data.week && data.week.number;
-    ge('liveWeekBadge').textContent = week ? 'Week '+week : '—';
+    if(err||!data){ ge('liveGamesGrid').innerHTML = empty('Could not load scoreboard.'); return; }
+    var events = data.events||[], week = data.week&&data.week.number;
+    ge('liveWeekBadge').textContent = week?'Week '+week:'\u2014';
     if(!events.length){
-      ge('liveGamesGrid').innerHTML = empty('No games today. The 2026 NFL regular season starts September 4.');
-      return;
+      ge('liveGamesGrid').innerHTML = empty('No games today.','The 2026 NFL regular season starts September 4, 2026.'); return;
     }
     var html = '';
     for(var i=0;i<events.length;i++){
-      var ev   = events[i];
-      var comp = (ev.competitions && ev.competitions[0]) || {};
-      var comps = comp.competitors || [];
-      var away = null, home = null;
-      for(var j=0;j<comps.length;j++){
-        if(comps[j].homeAway==='away') away=comps[j]; else home=comps[j];
-      }
-      away = away||{}; home = home||{};
-      var status = (comp.status && comp.status.type) || {};
-      var isLive = status.name==='STATUS_IN_PROGRESS';
-      var awayLogo = (away.team && away.team.logo) || logo((away.team&&away.team.abbreviation)||'nfl');
-      var homeLogo = (home.team && home.team.logo) || logo((home.team&&home.team.abbreviation)||'nfl');
-      html += '<div class="live-game-card'+(isLive?' is-live':'')+'\" data-gid="'+h(ev.id)+'">'
-        + '<div class="lgc-header">'
-        + '<span>'+h((ev.week&&ev.week.text)||'NFL')+'</span>'
-        + '<span class="'+(isLive?'lgc-status-live':'')+'">'+h(status.shortDetail||'—')+'</span></div>'
+      var ev=events[i], comp=(ev.competitions&&ev.competitions[0])||{}, comps=comp.competitors||[];
+      var away=null, home=null;
+      for(var j=0;j<comps.length;j++){ if(comps[j].homeAway==='away') away=comps[j]; else home=comps[j]; }
+      away=away||{}; home=home||{};
+      var status=(comp.status&&comp.status.type)||{}, isLive=status.name==='STATUS_IN_PROGRESS';
+      var awayLogo=(away.team&&away.team.logo)||logo((away.team&&away.team.abbreviation)||'nfl');
+      var homeLogo=(home.team&&home.team.logo)||logo((home.team&&home.team.abbreviation)||'nfl');
+      html += '<div class="live-game-card'+(isLive?' is-live':'')+'" data-gid="'+h(ev.id)+'">'
+        + '<div class="lgc-header"><span>'+h((ev.week&&ev.week.text)||'NFL')+'</span>'
+        + '<span class="'+(isLive?'lgc-status-live':'')+'">'+h(status.shortDetail||'\u2014')+'</span></div>'
         + '<div class="lgc-body">'
-        + '<div class="lgc-team"><div class="lgc-team-left">'
-        + '<img src="'+awayLogo+'" width="36" height="36" style="object-fit:contain" onerror="this.style.opacity=\'.2\'">'
-        + '<span class="lgc-tname">'+h((away.team&&away.team.abbreviation)||'—')+'</span>'
-        + '</div><span class="lgc-score">'+h(away.score||'—')+'</span></div>'
+        + '<div class="lgc-team"><div class="lgc-team-left"><img src="'+awayLogo+'" width="36" height="36" style="object-fit:contain" onerror="this.style.opacity=\'.2\'"><span class="lgc-tname">'+h((away.team&&away.team.abbreviation)||'\u2014')+'</span></div><span class="lgc-score">'+h(away.score||'\u2014')+'</span></div>'
         + '<div class="lgc-div"></div>'
-        + '<div class="lgc-team"><div class="lgc-team-left">'
-        + '<img src="'+homeLogo+'" width="36" height="36" style="object-fit:contain" onerror="this.style.opacity=\'.2\'">'
-        + '<span class="lgc-tname">'+h((home.team&&home.team.abbreviation)||'—')+'</span>'
-        + '</div><span class="lgc-score">'+h(home.score||'—')+'</span></div></div></div>';
+        + '<div class="lgc-team"><div class="lgc-team-left"><img src="'+homeLogo+'" width="36" height="36" style="object-fit:contain" onerror="this.style.opacity=\'.2\'"><span class="lgc-tname">'+h((home.team&&home.team.abbreviation)||'\u2014')+'</span></div><span class="lgc-score">'+h(home.score||'\u2014')+'</span></div>'
+        + '</div></div>';
     }
     ge('liveGamesGrid').innerHTML = html;
     qsa('#liveGamesGrid .live-game-card').forEach(function(card){
@@ -981,48 +845,39 @@ function loadLive(){
     });
   });
 }
-
 function openLive(gid){
-  var panel = ge('livePlaysPanel');
+  var panel=ge('livePlaysPanel');
   panel.classList.add('open');
   panel.scrollIntoView({behavior:'smooth',block:'nearest'});
-  ge('livePlaysWrap').innerHTML = spin();
+  ge('livePlaysWrap').innerHTML=spin();
   get(ESPN+'/summary?event='+gid, function(err, data){
-    if(err || !data){ ge('livePlaysWrap').innerHTML = empty('Could not load plays.'); return; }
-    var comps = (data.header && data.header.competitions && data.header.competitions[0] && data.header.competitions[0].competitors) || [];
+    if(err||!data){ ge('livePlaysWrap').innerHTML=empty('Could not load plays.'); return; }
+    var comps=(data.header&&data.header.competitions&&data.header.competitions[0]&&data.header.competitions[0].competitors)||[];
     var away=null,home=null;
     for(var i=0;i<comps.length;i++){ if(comps[i].homeAway==='away') away=comps[i]; else home=comps[i]; }
     away=away||{}; home=home||{};
-    ge('livePlaysHeader').innerHTML = '<div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px">'
-      + '<img src="'+logo((away.team&&away.team.abbreviation)||'nfl')+'" width="44" height="44" style="object-fit:contain">'
-      + '<div><div style="font-size:1.2rem;font-weight:900">'
-      + h((away.team&&away.team.displayName)||'?')+' @ '+h((home.team&&home.team.displayName)||'?')+'</div>'
-      + '<div style="color:var(--muted)">'+h(away.score||'—')+' \u2013 '+h(home.score||'—')+'</div></div>'
-      + '<img src="'+logo((home.team&&home.team.abbreviation)||'nfl')+'" width="44" height="44" style="object-fit:contain">'
-      + '</div>';
-    var drives = data.drives || {};
-    var allDrives = (drives.previous||[]).concat(drives.current?[drives.current]:[]);
-    var plays = [];
-    for(var i=0;i<allDrives.length;i++){
-      var dp = allDrives[i].plays||[];
-      for(var j=0;j<dp.length;j++) plays.push(dp[j]);
-    }
-    plays = plays.slice(-80).reverse();
-    if(!plays.length){ ge('livePlaysWrap').innerHTML = empty('No plays yet.'); return; }
-    var html = '';
+    ge('livePlaysHeader').innerHTML='<div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px">'
+      +'<img src="'+logo((away.team&&away.team.abbreviation)||'nfl')+'" width="44" height="44" style="object-fit:contain">'
+      +'<div><div style="font-size:1.2rem;font-weight:900">'+h((away.team&&away.team.displayName)||'?')+' @ '+h((home.team&&home.team.displayName)||'?')+'</div>'
+      +'<div style="color:var(--muted)">'+h(away.score||'\u2014')+' \u2013 '+h(home.score||'\u2014')+'</div></div>'
+      +'<img src="'+logo((home.team&&home.team.abbreviation)||'nfl')+'" width="44" height="44" style="object-fit:contain">'
+      +'</div>';
+    var drives=data.drives||{}, allDrives=(drives.previous||[]).concat(drives.current?[drives.current]:[]), plays=[];
+    for(var i=0;i<allDrives.length;i++){ var dp=allDrives[i].plays||[]; for(var j=0;j<dp.length;j++) plays.push(dp[j]); }
+    plays=plays.slice(-80).reverse();
+    if(!plays.length){ ge('livePlaysWrap').innerHTML=empty('No plays yet.'); return; }
+    var html='';
     for(var i=0;i<plays.length;i++){
-      var p = plays[i];
-      var chips = '';
-      if(p.period&&p.period.number) chips += '<span class="play-chip">Q'+h(p.period.number)+'</span>';
-      if(p.clock&&p.clock.displayValue) chips += '<span class="play-chip">'+h(p.clock.displayValue)+'</span>';
-      if(p.start&&p.start.downDistanceText) chips += '<span class="play-chip">'+h(p.start.downDistanceText)+'</span>';
-      if(p.type&&p.type.text) chips += '<span class="play-chip">'+h(p.type.text)+'</span>';
-      if(p.statYardage) chips += '<span class="play-chip">'+h(p.statYardage)+' yds</span>';
-      if(p.scoringPlay) chips += '<span class="play-chip scoring">\u2b06 SCORE</span>';
-      html += '<div class="play-row"><div class="play-row-meta">'+chips+'</div>'
-        + '<div class="play-desc">'+h(p.text||'')+'</div></div>';
+      var p=plays[i], chips='';
+      if(p.period&&p.period.number) chips+='<span class="play-chip">Q'+h(p.period.number)+'</span>';
+      if(p.clock&&p.clock.displayValue) chips+='<span class="play-chip">'+h(p.clock.displayValue)+'</span>';
+      if(p.start&&p.start.downDistanceText) chips+='<span class="play-chip">'+h(p.start.downDistanceText)+'</span>';
+      if(p.type&&p.type.text) chips+='<span class="play-chip">'+h(p.type.text)+'</span>';
+      if(p.statYardage) chips+='<span class="play-chip">'+h(p.statYardage)+' yds</span>';
+      if(p.scoringPlay) chips+='<span class="play-chip scoring">\u2b06 SCORE</span>';
+      html+='<div class="play-row"><div class="play-row-meta">'+chips+'</div><div class="play-desc">'+h(p.text||'')+'</div></div>';
     }
-    ge('livePlaysWrap').innerHTML = html;
+    ge('livePlaysWrap').innerHTML=html;
   });
 }
 ge('closeLivePlays').onclick = function(){ ge('livePlaysPanel').classList.remove('open'); };
