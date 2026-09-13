@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuantVision 3D Live</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div class="mark">◈</div>
+      <div>
+        <h1>QuantVision 3D Live</h1>
+        <p>Normalized Kalshi + Polymarket tape, order books, and model-vs-market alerts. Research only.</p>
+      </div>
+    </div>
+    <div class="status-row">
+      <span class="pill" id="sourcePill">connecting</span>
+      <span class="pill" id="updatedPill">waiting</span>
+    </div>
+  </header>
+  <main>
+    <div class="kpis">
+      <div class="card"><h3>Markets</h3><div class="value" id="kpiMarkets">—</div></div>
+      <div class="card"><h3>Trades in view</h3><div class="value" id="kpiTrades">—</div></div>
+      <div class="card"><h3>Alerts</h3><div class="value" id="kpiAlerts">—</div></div>
+      <div class="card"><h3>Mean |model − market|</h3><div class="value" id="kpiDev">—</div></div>
+    </div>
+    <div class="toolbar">
+      <input id="q" placeholder="Search markets">
+      <select id="venue">
+        <option value="all">All venues</option>
+        <option value="kalshi">Kalshi</option>
+        <option value="polymarket">Polymarket</option>
+      </select>
+      <input id="apiBase" style="min-width:220px" placeholder="http://127.0.0.1:8787">
+      <button id="saveApi">Use API</button>
+      <button class="primary" id="refreshBtn">Refresh</button>
+    </div>
+    <div class="layout">
+      <section class="panel">
+        <h2>Live markets</h2>
+        <div style="overflow:auto; max-height:520px;">
+          <table>
+            <thead>
+              <tr><th>Venue</th><th>Market</th><th>Consensus</th><th>App P</th><th>Δ</th><th>Vol 24h</th></tr>
+            </thead>
+            <tbody id="marketBody"></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="panel">
+        <h2 id="selectedTitle">Order book</h2>
+        <div class="book">
+          <div class="book-col"><h4>Bids</h4><div id="bids"></div></div>
+          <div class="book-col"><h4>Asks</h4><div id="asks"></div></div>
+        </div>
+        <h2 style="margin-top:18px;">Tape</h2>
+        <div class="tape">
+          <table>
+            <thead><tr><th>Time</th><th>Yes px</th><th>Size</th><th>Side</th></tr></thead>
+            <tbody id="tape"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+    <section class="panel" style="margin-top:14px;">
+      <h2>Deviation alerts</h2>
+      <p class="note">Major events alert at 5%. Other markets use 10%. Every check is written to <code>performance_log</code> for backtests even when it does not alert.</p>
+      <table>
+        <thead><tr><th>When</th><th>Severity</th><th>Market</th><th>Δ</th></tr></thead>
+        <tbody id="alertBody"></tbody>
+      </table>
+    </section>
+  </main>
+  <footer>QuantVision 3D · paper trading / research only · <a href="https://github.com/whoizJAKE/quantvision-3d">source</a></footer>
+  <script src="./app.js"></script>
+</body>
+</html>
